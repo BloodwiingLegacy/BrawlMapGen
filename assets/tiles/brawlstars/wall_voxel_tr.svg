@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="0.85000002"
+   height="1.7"
+   viewBox="0 0 0.85000002 1.7"
+   version="1.1"
+   id="svg5"
+   sodipodi:docname="wall_voxel_tr.svg"
+   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#171717"
+     bordercolor="#999999"
+     borderopacity="1"
+     inkscape:pageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="px"
+     showgrid="false"
+     units="px"
+     inkscape:zoom="256"
+     inkscape:cx="0.328125"
+     inkscape:cy="0.98632812"
+     inkscape:window-width="1284"
+     inkscape:window-height="1041"
+     inkscape:window-x="208"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="layer1"
+     inkscape:object-paths="true"
+     inkscape:snap-intersection-paths="true"
+     inkscape:snap-smooth-nodes="true"
+     inkscape:snap-midpoints="true"
+     inkscape:snap-object-midpoints="true">
+    <inkscape:grid
+       type="xygrid"
+       id="grid836"
+       originx="-0.7758"
+       originy="125.05746" />
+  </sodipodi:namedview>
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-0.7758,125.05746)">
+    <g
+       id="g149067"
+       transform="matrix(0.05,0,0,0.05,-53.5242,-113.85746)"
+       style="stroke-width:20">
+      <rect
+         style="fill:#0f0f37;fill-opacity:0.2;stroke:none;stroke-width:755.906;stroke-linecap:round;stroke-linejoin:round;paint-order:markers stroke fill"
+         id="rect128612"
+         width="3"
+         height="6"
+         x="1099"
+         y="-196" />
+      <path
+         id="path128600"
+         style="opacity:1;fill:#00403c;fill-opacity:1;stroke:none;stroke-width:755.906;stroke-linecap:round;stroke-linejoin:round;paint-order:markers stroke fill"
+         d="m 1086,-224 v 32 h 2 l 1,-29 14,-1 v -2 z m 11,12 1,20 h 2 v -3 h 3 v -2 l -1,-4 1,-4 v -2 h -3 v -2 h 3 v -2 z"
+         sodipodi:nodetypes="ccccccccccccccccccccc" />
+      <path
+         id="path128602"
+         style="opacity:1;fill:#085048;fill-opacity:1;stroke-width:755.906;stroke-linecap:round;stroke-linejoin:round;paint-order:markers stroke fill"
+         d="m 1100,-200 1,-1 2,1 v 3 h -3 z"
+         sodipodi:nodetypes="cccccc" />
+      <rect
+         style="opacity:1;fill:#187864;fill-opacity:1;stroke:none;stroke-width:755.906;stroke-linecap:round;stroke-linejoin:round;paint-order:markers stroke fill"
+         id="rect128604"
+         width="3"
+         height="5"
+         x="1100"
+         y="-205" />
+      <path
+         style="color:#000000;fill:#04544c;fill-opacity:1;stroke-width:755.906;stroke-linecap:round;stroke-linejoin:round;-inkscape-stroke:none;paint-order:markers stroke fill"
+         d="m 1097,-216 6,1 v 4 h -6 z"
+         id="path134003"
+         sodipodi:nodetypes="ccccc" />
+      <path
+         id="path128606"
+         style="opacity:1;fill:#20a890;fill-opacity:1;stroke:none;stroke-width:755.906;stroke-linecap:round;stroke-linejoin:round;paint-order:markers stroke fill"
+         d="m 1088,-218 v 26 h 10 v -23 h 5 v -7 h -11 l -3,1 z"
+         sodipodi:nodetypes="ccccccccc" />
+      <path
+         id="path128608"
+         style="opacity:1;fill:#24a088;fill-opacity:1;stroke:none;stroke-width:755.906;stroke-linecap:round;stroke-linejoin:round;paint-order:markers stroke fill"
+         d="m 1090,-220 v 28 h 6 v -25 h 7 v -3 z"
+         sodipodi:nodetypes="ccccccc" />
+      <path
+         id="path128610"
+         style="opacity:1;fill:#ffa824;fill-opacity:1;stroke:none;stroke-width:755.906;stroke-linecap:round;stroke-linejoin:round;paint-order:markers stroke fill"
+         d="m 1088,-222 v 4 h 2 v -2 h 2 v -2 z"
+         sodipodi:nodetypes="ccccccc" />
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="1"
+   height="1.7"
+   viewBox="0 0 1 1.7"
+   version="1.1"
+   id="svg5"
+   sodipodi:docname="vase_voxel.svg"
+   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#171717"
+     bordercolor="#999999"
+     borderopacity="1"
+     inkscape:pageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="px"
+     showgrid="false"
+     units="px"
+     inkscape:zoom="93.916667"
+     inkscape:cx="0.33007986"
+     inkscape:cy="1.8473824"
+     inkscape:window-width="1284"
+     inkscape:window-height="1041"
+     inkscape:window-x="208"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="layer1"
+     inkscape:object-paths="true"
+     inkscape:snap-intersection-paths="true"
+     inkscape:snap-smooth-nodes="true"
+     inkscape:snap-midpoints="true"
+     inkscape:snap-object-midpoints="true">
+    <inkscape:grid
+       type="xygrid"
+       id="grid836"
+       originx="0.84463"
+       originy="126.98491" />
+  </sodipodi:namedview>
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0.84463,126.98491)">
+    <g
+       id="g1783"
+       transform="matrix(0.05,0,0,0.05,-7.34463,-120.28491)"
+       style="stroke-width:20">
+      <rect
+         style="fill:#0f0f37;fill-opacity:0.2;stroke:none;stroke-width:755.906;stroke-linecap:round;stroke-linejoin:round;paint-order:markers stroke fill"
+         id="rect104534"
+         width="20"
+         height="12"
+         x="130"
+         y="-112" />
+      <path
+         style="fill:#104c40;fill-opacity:1;stroke:none;stroke-width:20px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="m 130,-110 h 2 v 2 h 2 v 2 h 12 v -2 h 2 v -2 h 2 v -18 h -2 v -2 h -2 v -2 h -4 v -2 h -4 v 2 h -4 v 2 h -2 v 2 h -2 z"
+         id="path93780" />
+      <path
+         style="fill:#146454;fill-opacity:1;stroke:none;stroke-width:20px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="m 148,-110 v -8 l -6,-12 h -4 l -4,8 12,12 z"
+         id="path93782" />
+      <rect
+         style="fill:#085448;fill-opacity:1;stroke:none;stroke-width:755.906;stroke-linecap:round;stroke-linejoin:round;paint-order:markers stroke fill"
+         id="rect93784"
+         width="3"
+         height="9"
+         x="132"
+         y="-119" />
+      <rect
+         style="fill:#105c4c;fill-opacity:1;stroke:none;stroke-width:755.906;stroke-linecap:round;stroke-linejoin:round;paint-order:markers stroke fill"
+         id="rect93786"
+         width="12"
+         height="14"
+         x="134"
+         y="-122" />
+      <path
+         id="path93788"
+         style="fill:#1c8874;fill-opacity:1;stroke:none;stroke-width:755.906;stroke-linecap:round;stroke-linejoin:round;paint-order:markers stroke fill"
+         d="m 134,-130 v 2 h -2 v 10 h 2 v 2 h 12 v -2 h 2 v -10 h -2 v -2 h -2 v 8 h 2 v 2 h -2 v 2 h -8 v -2 h -2 v -2 h 2 v -8 z m 2,8 v 2 h 8 v -2 z" />
+      <path
+         id="path93790"
+         style="fill:#28a088;fill-opacity:1;stroke:none;stroke-width:755.906;stroke-linecap:round;stroke-linejoin:round;paint-order:markers stroke fill"
+         d="m 134,-128 v 6 h 2 v 2 h 8 v -2 h 2 v -6 h -4 v 2 h 2 v 2 h -2 v 2 h -4 v -2 h -2 v -2 h 2 v -2 z m 4,2 v 2 h 4 v -2 z" />
+      <path
+         id="path93792"
+         style="fill:#30b49c;fill-opacity:1;stroke:none;stroke-width:755.906;stroke-linecap:round;stroke-linejoin:round;paint-order:markers stroke fill"
+         d="m 138,-132 v 2 h 4 v -2 z m 4,2 v 4 h 2 v -4 z m 0,4 h -4 v 2 h 4 z m -4,0 v -4 h -2 v 4 z" />
+      <rect
+         style="fill:#2c2c50;fill-opacity:1;stroke:none;stroke-width:755.906;stroke-linecap:round;stroke-linejoin:round;paint-order:markers stroke fill"
+         id="rect103477"
+         width="4"
+         height="2"
+         x="138"
+         y="-128" />
+    </g>
+  </g>
+</svg>

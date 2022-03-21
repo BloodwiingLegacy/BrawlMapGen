@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="0.60000002"
+   height="2.1500001"
+   viewBox="0 0 0.60000002 2.1500001"
+   version="1.1"
+   id="svg5"
+   sodipodi:docname="rope_post_voxel_t.svg"
+   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#171717"
+     bordercolor="#999999"
+     borderopacity="1"
+     inkscape:pageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="px"
+     showgrid="false"
+     units="px"
+     inkscape:zoom="93.916667"
+     inkscape:cx="0.53238687"
+     inkscape:cy="1.9006211"
+     inkscape:window-width="1284"
+     inkscape:window-height="1041"
+     inkscape:window-x="208"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="layer1"
+     inkscape:object-paths="true"
+     inkscape:snap-intersection-paths="true"
+     inkscape:snap-smooth-nodes="true"
+     inkscape:snap-midpoints="true"
+     inkscape:snap-object-midpoints="true">
+    <inkscape:grid
+       type="xygrid"
+       id="grid836"
+       originx="0"
+       originy="0" />
+  </sodipodi:namedview>
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       id="g2067"
+       transform="scale(0.05)"
+       style="stroke-width:20">
+      <path
+         id="path4687"
+         style="fill:#044840;fill-opacity:1;stroke:none;stroke-width:755.907;stroke-linecap:round;stroke-linejoin:round;paint-order:markers stroke fill"
+         d="M 5,0 V 1 H 4 V 15 H 8 V 1 H 7 V 0 Z" />
+      <rect
+         style="fill:#08685c;fill-opacity:1;stroke:none;stroke-width:755.907;stroke-linecap:round;stroke-linejoin:round;paint-order:markers stroke fill"
+         id="rect4689"
+         width="2"
+         height="8"
+         x="5"
+         y="1" />
+      <rect
+         style="fill:#0f0f37;fill-opacity:0.2;stroke:none;stroke-width:755.907;stroke-linecap:round;stroke-linejoin:round;paint-order:markers stroke fill"
+         id="rect4701"
+         width="12"
+         height="8"
+         x="0"
+         y="35" />
+      <path
+         id="path4703"
+         style="fill:#682c04;fill-opacity:1;stroke:none;stroke-width:755.907;stroke-linecap:round;stroke-linejoin:round;paint-order:markers stroke fill"
+         d="m 4,9 v 2 H 2 V 31 H 0 v 6 h 2 v 2 h 8 v -2 h 2 V 31 H 10 V 11 H 8 V 9 Z" />
+      <path
+         id="path4705"
+         style="fill:#883800;fill-opacity:1;stroke-width:755.907;stroke-linecap:round;stroke-linejoin:round;paint-order:markers stroke fill"
+         d="m 2,35 4,-1 4,1 v 2 H 2 Z"
+         sodipodi:nodetypes="cccccc" />
+      <path
+         id="path4707"
+         style="fill:#bc6c28;fill-opacity:1;stroke:none;stroke-width:755.907;stroke-linecap:round;stroke-linejoin:round;paint-order:markers stroke fill"
+         d="m 2,31 v 4 h 2 v 2 h 4 v -2 h 2 v -4 z" />
+      <path
+         id="path4709"
+         style="fill:#a45010;fill-opacity:1;stroke-width:755.907;stroke-linecap:round;stroke-linejoin:round;paint-order:markers stroke fill"
+         d="m 4,15 2,-1 2,1 V 35 H 4 Z"
+         sodipodi:nodetypes="cccccc" />
+      <rect
+         style="fill:#fc9034;fill-opacity:1;stroke:none;stroke-width:755.907;stroke-linecap:round;stroke-linejoin:round;paint-order:markers stroke fill"
+         id="rect4711"
+         width="4"
+         height="4"
+         x="4"
+         y="11" />
+      <rect
+         style="fill:#045850;fill-opacity:1;stroke:none;stroke-width:755.907;stroke-linecap:round;stroke-linejoin:round;paint-order:markers stroke fill"
+         id="rect4713"
+         width="4"
+         height="3"
+         x="4"
+         y="17" />
+    </g>
+  </g>
+</svg>
