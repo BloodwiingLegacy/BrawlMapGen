@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="1"
+   height="1.8499998"
+   viewBox="0 0 1 1.8499998"
+   version="1.1"
+   id="svg5"
+   sodipodi:docname="biodome_barrel.svg"
+   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#171717"
+     bordercolor="#999999"
+     borderopacity="1"
+     inkscape:pageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="px"
+     showgrid="false"
+     units="px"
+     inkscape:zoom="187.83333"
+     inkscape:cx="0.53238687"
+     inkscape:cy="0.90771961"
+     inkscape:window-width="1284"
+     inkscape:window-height="1041"
+     inkscape:window-x="208"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="layer1"
+     inkscape:object-paths="true"
+     inkscape:snap-intersection-paths="true"
+     inkscape:snap-smooth-nodes="true"
+     inkscape:snap-midpoints="true"
+     inkscape:snap-object-midpoints="true">
+    <inkscape:grid
+       type="xygrid"
+       id="grid836"
+       originx="0"
+       originy="0" />
+  </sodipodi:namedview>
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       id="g156547"
+       transform="scale(0.05)"
+       style="stroke-width:20">
+      <circle
+         style="fill:#0a0f32;fill-opacity:0.2;stroke:none;stroke-width:80;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;paint-order:markers stroke fill"
+         id="circle34041"
+         cx="10"
+         cy="26.999996"
+         r="10" />
+      <path
+         id="path32782"
+         style="color:#000000;fill:#00441c;fill-opacity:1;stroke-width:20;stroke-linecap:square;stroke-linejoin:round;-inkscape-stroke:none;paint-order:markers stroke fill"
+         d="M 10,0 C 4.500847,0 1.8554687e-8,4.50085 1.8554687e-8,10 V 21 C 1.8554687e-8,26.49915 4.500847,31 10,31 15.499153,31 20,26.49915 20,21 V 10 C 20,4.50085 15.499153,0 10,0 Z" />
+      <path
+         id="circle18511"
+         style="fill:#008034;fill-opacity:1;stroke:none;stroke-width:80;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;paint-order:markers stroke fill"
+         d="m 2,10 v 11 a 8,8 0 0 0 8,8 8,8 0 0 0 8,-8 V 10 Z" />
+      <path
+         id="path21381"
+         style="fill:#009034;fill-opacity:1;stroke:none;stroke-width:80;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;paint-order:markers stroke fill"
+         d="m 2,12 v 2 a 8,8 0 0 0 8,8 8,8 0 0 0 8,-8 v -2 a 8,8 0 0 1 -8,8 8,8 0 0 1 -8,-8 z m 0,5 v 2 a 8,8 0 0 0 8,8 8,8 0 0 0 8,-8 v -2 a 8,8 0 0 1 -8,8 8,8 0 0 1 -8,-8 z" />
+      <path
+         id="ellipse28875"
+         style="fill:#008c3c;fill-opacity:1;stroke:none;stroke-width:79.9998;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;paint-order:markers stroke fill"
+         d="M 7.773438,10 A 7.5,16 0 0 0 7,17 7.5,16 0 0 0 9.544922,28.96484 8,8 0 0 0 10,29.00004 a 8,8 0 0 0 8,-8 v -11 z" />
+      <path
+         id="path29042"
+         style="fill:#009838;fill-opacity:1;stroke:none;stroke-width:80;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;paint-order:markers stroke fill"
+         d="M 18,12 A 8,8 0 0 1 10,20 8,8 0 0 1 7.097656,19.43359 7.5,16 0 0 0 7.314453,21.51562 8,8 0 0 0 10,22 8,8 0 0 0 18,14 Z m 0,5 A 8,8 0 0 1 10,25 8,8 0 0 1 7.939453,24.7168 7.5,16 0 0 0 8.599609,26.86133 8,8 0 0 0 10,27 8,8 0 0 0 18,19 Z" />
+      <circle
+         style="fill:#00b030;fill-opacity:1;stroke:none;stroke-width:80;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;paint-order:markers stroke fill"
+         id="circle18521"
+         cx="10"
+         cy="9.9999962"
+         r="8" />
+      <circle
+         style="fill:#e01cc8;fill-opacity:1;stroke:none;stroke-width:80;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;paint-order:markers stroke fill"
+         id="circle18523"
+         cx="10"
+         cy="9.9999962"
+         r="5.5" />
+      <path
+         id="circle27385"
+         style="fill:#b014a0;fill-opacity:1;stroke:none;stroke-width:80;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;paint-order:markers stroke fill"
+         d="M 10,4.5 A 5.5,5.5 0 0 0 4.5,10 5.5,5.5 0 0 0 4.796875,11.75 5.5,5.5 0 0 1 10,8 5.5,5.5 0 0 1 15.207031,11.73633 5.5,5.5 0 0 0 15.5,10 5.5,5.5 0 0 0 10,4.5 Z" />
+    </g>
+  </g>
+</svg>
