@@ -118,7 +118,10 @@ namespace BMG
         public class TileLinkRule
         {
             public string condition { get; set; }
+            public char? overrideCode { get; set; }
             public int? requiredBiome { get; set; }
+            public string requiredTag { get; set; }
+            public string requiredGamemode { get; set; }
             public string[] changeBinary { get; set; }
             public int? changeTileType { get; set; }
             public string changeAsset { get; set; }
@@ -136,6 +139,7 @@ namespace BMG
             public SpecialTile[] specialTiles { get; set; }
             public TileDefault[] overrideBiome { get; set; }
             public MapMod[] mapModder { get; set; }
+            public PreProcessor[] preProcessors { get; set; }
         }
 
         public class Gamemode : GamemodeBase
@@ -156,6 +160,15 @@ namespace BMG
         {
             public string tile { get; set; }
             public string position { get; set; }
+        }
+
+        public class PreProcessor
+        {
+            public char[] ifTile { get; set; } = null;
+            public string[] ifTag { get; set; } = null;
+            public int? ifOccurance { get; set; } = null;
+            public char[] affectTiles { get; set; }
+            public string setTag { get; set; }
         }
 
         public enum EdgeCase

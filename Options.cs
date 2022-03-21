@@ -73,10 +73,10 @@ namespace BMG
             public int tileTime { get; set; }
         }
 
-        public static void RecordRSTR(List<RecordedSTR> rstrArray, char tileCode)
+        public static void RecordRSTR(List<RecordedSTR> rstrArray, MapTile tile)
         {
             foreach (var rstro in rstrArray)
-                if (rstro.tileCode == tileCode)
+                if (rstro.tileCode == tile.code)
                 {
                     rstro.tileTime++;
                     return;
@@ -84,7 +84,7 @@ namespace BMG
 
             rstrArray.Add(new RecordedSTR()
             {
-                tileCode = tileCode,
+                tileCode = tile.code,
                 tileTime = 0
             });
         }

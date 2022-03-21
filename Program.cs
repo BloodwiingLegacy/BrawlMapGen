@@ -235,7 +235,7 @@ namespace BMG
                     Logger.LogSetup("Drawing background...");
                     Logger.LogStatus("Running AMG!Blocks...");
 
-                    tileDrawer.ColorBackground(tiledata, batchOption, border);
+                    tileDrawer.ColorBackground(tiledata, mapBiome, batchOption, border);
 
                     Logger.LogStatus("Background drawn.");
 
@@ -259,9 +259,9 @@ namespace BMG
                         }
                     }
 
-                    if (mapGamemode != null) // Draw Gamemode Tiles (Before every other tile)
+                    if (mapGamemode != null)
                     {
-                        if (mapGamemode.specialTiles != null)
+                        if (mapGamemode.specialTiles != null) // Draw Gamemode Tiles (Before every other tile)
                             foreach (var st in mapGamemode.specialTiles)
                             {
                                 if (st.drawOrder == 1)
@@ -335,13 +335,47 @@ namespace BMG
                                             ysLoc = yLoc.ToString();
                                         }
 
-                                        var row = AMGState.map.data[yLoc].ToCharArray();
-                                        row[xLoc] = oTile.tileCode;
-                                        AMGState.map.data[yLoc] = string.Join("", row);
+                                        AMGState.map.data[yLoc][xLoc].code = oTile.tileCode;
 
                                         Logger.LogTile(new TileActionTypes(1, 0, 1, 0, 0), oTile, ysLoc, xsLoc, yLength, xLength, Logger.TileEvent.gamemodeModding);
                                     }
 
+                        if (mapGamemode.preProcessors != null)
+                        {
+                            Dictionary<char, int> counter = new Dictionary<char, int>();
+                            for (int y = 0; y < AMGState.map.data.Length; y++)
+                                for (int x = 0; x < AMGState.map.data[y].Length; x++)
+                                {
+                                    var tile = AMGState.map.data[y][x];
+
+                                    if (!counter.ContainsKey(tile.code))
+                                        counter.Add(tile.code, 0);
+                                    counter[tile.code]++;
+
+                                    foreach (var pp in mapGamemode.preProcessors)
+                                    {
+                                        if (!pp.ifTile.Contains(tile.code))
+                                            break;
+
+                                        if (pp.ifOccurance != null && pp.ifOccurance != counter[tile.code])
+                                            break;
+
+                                        if (pp.ifTag != null)
+                                        {
+                                            bool hasTag = false;
+
+                                            foreach (string tag in pp.ifTag)
+                                                if (tile.tags == null || tile.tags.Contains(tag))
+                                                    hasTag = true;
+
+                                            if (!hasTag)
+                                                break;
+                                        }
+
+                                        AMGState.map.TagTiles(pp.setTag, pp.affectTiles, y, x);
+                                    }
+                                }
+                        }
                     }
 
                     Options1.SpecialTileRules[] str = null;
@@ -354,15 +388,14 @@ namespace BMG
                         int currentX = 0;
 
                         List<OrderedTile> orderedTiles = new List<OrderedTile>();
-                        List<Options1.RecordedSTR> rstr = new List<Options1.RecordedSTR>();
-
+                        
                         Logger.Title.Status.UpdateStatus(0, xLength * yLength, string.Format("Drawing tiles... PASS {0}", drawPass));
                         // Begin to draw map
-                        foreach (string row in AMGState.map.data)
+                        foreach (MapTile[] row in AMGState.map.data)
                         {
                             List<OrderedTile> orderedHorTiles = new List<OrderedTile>();
 
-                            foreach (char tTile in row.ToCharArray())
+                            foreach (MapTile tTile in row)
                             {
                                 Logger.Title.Status.IncreaseStatus();
                                 Logger.Title.RefreshTitle();
@@ -409,18 +442,18 @@ namespace BMG
 
                                 if (batchOption.replaceTiles != null)
                                     foreach (Options1.Replace repTile in batchOption.replaceTiles) // Specified Tile Code Replacer
-                                        if (tile == repTile.from)
-                                            tile = repTile.to;
+                                        if (tile.code == repTile.from)
+                                            tile.code = repTile.to;
 
-                                if (batchOption.skipTiles.Contains(tile)) // Specified Tile Skipper
+                                if (batchOption.skipTiles.Contains(tile.code)) // Specified Tile Skipper
                                 {
-                                    Logger.LogTile(new TileActionTypes(0, 1, 0, 0, 0), new Tiledata.Tile() { tileName = "", tileCode = tile }, currentY, currentX, yLength, xLength, Logger.TileEvent.tileDraw);
+                                    Logger.LogTile(new TileActionTypes(0, 1, 0, 0, 0), new Tiledata.Tile() { tileName = "", tileCode = tile.code }, currentY, currentX, yLength, xLength, Logger.TileEvent.tileDraw);
                                     currentX++;
                                     tileDrawn = true;
                                     continue;
                                 }
 
-                                if (tiledata.ignoreTiles.Contains(tile)) // Specified Tile Ignorer
+                                if (tiledata.ignoreTiles.Contains(tile.code)) // Specified Tile Ignorer
                                 {
                                     currentX++;
                                     tileDrawn = true;
@@ -430,16 +463,17 @@ namespace BMG
                                 // Checking STR (Special Tile Rules) Tiles' occurance number and acting if conditions are met
                                 if (str != null)
                                 {
+                                    List<Options1.RecordedSTR> rstr = new List<Options1.RecordedSTR>();
                                     bool drawn = false;
                                     foreach (var ostr in str)
-                                        if (ostr.tileCode == tile)
+                                        if (ostr.tileCode == tile.code)
                                         {
                                             Options1.RecordRSTR(rstr, tile);
                                             foreach (var orstr in rstr)
-                                                if (orstr.tileCode == tile)
+                                                if (orstr.tileCode == tile.code)
                                                     if (ostr.tileTime == orstr.tileTime)
                                                         foreach (var aTile in tiledata.tiles)
-                                                            if (aTile.tileCode == tile)
+                                                            if (aTile.tileCode == tile.code)
                                                             {
                                                                 // Save tile for later drawing (Ordering and Horizontal Ordering)
                                                                 if (aTile.tileTypes[ostr.tileType].order != null)
@@ -508,7 +542,7 @@ namespace BMG
 
                                 foreach (Tiledata.Tile aTile in tiledata.tiles)
                                 {
-                                    if (aTile.tileCode == tile) // Loop until tile found matching with data
+                                    if (aTile.tileCode == tile.code) // Loop until tile found matching with data
                                     {
                                         Tiledata.TileDefault setTileDefault = null;
                                         foreach (Tiledata.TileDefault tileDefault in mapBiome.defaults)
@@ -534,16 +568,24 @@ namespace BMG
                                             {
                                                 if (aTile.tileLinks != null) // Check if Tile Links are set
                                                 {
-                                                    NeighborBinary = TileDrawer.tileLinks(AMGState.map.data, currentX, currentY, aTile, batchOption.replaceTiles);
+                                                    NeighborBinary = TileDrawer.tileLinks(AMGState.map.data, currentX, currentY, aTile, aTile.tileCode, batchOption.replaceTiles);
 
                                                     List<Tiledata.TileLinkRule> accurateRules = new List<Tiledata.TileLinkRule>();
 
                                                     var nbca = NeighborBinary.ToCharArray(); // Get neighboring tiles in binary
+                                                    var cnbca = nbca;
+
                                                     if (aTile.tileLinks.rules.Length != 0)
                                                     {
                                                         // Check if tile rule is matching and act
                                                         foreach (var rule in aTile.tileLinks.rules)
                                                         {
+                                                            if (rule.overrideCode != null)
+                                                            {
+                                                                NeighborBinary = TileDrawer.tileLinks(AMGState.map.data, currentX, currentY, aTile, rule.overrideCode.Value, batchOption.replaceTiles);
+                                                                cnbca = NeighborBinary.ToCharArray(); // Get neighboring tiles in binary
+                                                            }
+
                                                             int accuracy = 0;
                                                             for (int x = 0; x < 8; x++)
                                                             {
@@ -551,33 +593,38 @@ namespace BMG
                                                                 {
                                                                     if (rule.condition.Replace("!", "").ToCharArray()[x] == '*')
                                                                         accuracy++;
-                                                                    else if (rule.condition.Replace("!", "").ToCharArray()[x] != nbca[x])
+                                                                    else if (rule.condition.Replace("!", "").ToCharArray()[x] != cnbca[x])
                                                                         accuracy++;
                                                                 }
                                                                 else
                                                                 {
                                                                     if (rule.condition.ToCharArray()[x] == '*')
                                                                         accuracy++;
-                                                                    else if (rule.condition.ToCharArray()[x] == nbca[x])
+                                                                    else if (rule.condition.ToCharArray()[x] == cnbca[x])
                                                                         accuracy++;
                                                                 }
                                                             }
 
                                                             if (accuracy == 8)
                                                             {
+                                                                bool match = true;
+                                                                
                                                                 if (rule.requiredBiome != null)
-                                                                {
+                                                                    if (rule.requiredBiome.GetValueOrDefault() != batchOption.biome)
+                                                                        match = false;
 
-                                                                    if (rule.requiredBiome.GetValueOrDefault() == batchOption.biome)
-                                                                    {
-                                                                        accurateRules.Add(rule);
-                                                                        if (!aTile.tileLinks.multipleConditionsCouldApply)
-                                                                            break;
-                                                                    }
-                                                                }
-                                                                else
+                                                                if (rule.requiredGamemode != null)
+                                                                    if (rule.requiredGamemode != batchOption.gamemode)
+                                                                        match = false;
+
+                                                                if (rule.requiredTag != null)
+                                                                    if (tile.tags == null || !tile.tags.Contains(rule.requiredTag))
+                                                                        match = false;
+
+                                                                if (match)
                                                                 {
                                                                     accurateRules.Add(rule);
+
                                                                     if (!aTile.tileLinks.multipleConditionsCouldApply)
                                                                         break;
                                                                 }
@@ -587,9 +634,18 @@ namespace BMG
 
                                                     string fols = "";
 
+                                                    if (aTile.tileLinks.defaults == null && accurateRules.Count == 0)
+                                                        break;
+
                                                     // Do actions specified in the rule which were correct
-                                                    var defaultType = aTile.tileTypes[aTile.tileLinks.defaults.tileType];
-                                                    int type = aTile.tileLinks.defaults.tileType;
+                                                    int type;
+
+                                                    if (aTile.tileLinks.defaults != null)
+                                                        type = aTile.tileLinks.defaults.tileType;
+                                                    else
+                                                        type = 0;
+
+                                                    var defaultType = aTile.tileTypes[type];
                                                     foreach (Tiledata.TileLinkRule aRule in accurateRules)
                                                     {
                                                         if (aRule.changeBinary != null)
@@ -745,12 +801,12 @@ namespace BMG
 
                                 if (!tileDrawn)
                                 {
-                                    if (!tilesFailed.ContainsKey(tTile))
+                                    if (!tilesFailed.ContainsKey(tTile.code))
                                     {
-                                        tilesFailed.Add(tTile, 1);
+                                        tilesFailed.Add(tTile.code, 1);
                                     }
                                     else
-                                        tilesFailed[tTile]++;
+                                        tilesFailed[tTile.code]++;
                                 }
 
                                 currentX++;
@@ -1122,11 +1178,11 @@ namespace BMG
             return;
         }
 
-        public void ColorBackground(Tiledata tiledata, Options1.BatchSettings batchOption, float[] borderSize) // Filling in background colors
+        public void ColorBackground(Tiledata tiledata, Tiledata.Biome biome, Options1.BatchSettings batchOption, float[] borderSize) // Filling in background colors
         {
             AMGState.drawer.ResetCursor();
 
-            var bg = tiledata.biomes[batchOption.biome].background;
+            var bg = biome.background;
 
             if (bg == null)
                 bg = tiledata.defaultBiome.background;
@@ -1135,7 +1191,7 @@ namespace BMG
 
             while (!AMGState.map.drawn)
             {
-                if (batchOption.skipTiles.Contains(AMGState.ReadAtCursor()))
+                if (batchOption.skipTiles.Contains(AMGState.ReadAtCursor().code))
                 {
                     AMGState.MoveCursor();
                     continue;
@@ -1174,7 +1230,7 @@ namespace BMG
             g.Dispose();
         }
 
-        public static string tileLinks(string[] map, int currentX, int currentY, Tiledata.Tile tileObject, Options1.Replace[] replaces)
+        public static string tileLinks(MapTile[][] map, int currentX, int currentY, Tiledata.Tile tileObject, char check, Options1.Replace[] replaces)
         {
             string binary = "";
             string neighbors;
@@ -1231,7 +1287,7 @@ namespace BMG
                         if (neighbors[x] == '%')
                             binary += '0'; // edgeCase
                         else
-                            binary += checkNeighboringTile(map, currentX, currentY, tileObject, replaces, x); // check tile in map
+                            binary += checkNeighboringTile(map, currentX, currentY, replaces, check, x); // check tile in map
                     }
                     break;
                 case Tiledata.EdgeCase.copies: // edges are filled with equal tiles
@@ -1240,7 +1296,7 @@ namespace BMG
                         if (neighbors[x] == '%')
                             binary += '1'; // edgeCase
                         else
-                            binary += checkNeighboringTile(map, currentX, currentY, tileObject, replaces, x); // check tile in map
+                            binary += checkNeighboringTile(map, currentX, currentY, replaces, check, x); // check tile in map
                     }
                     break;
                 case Tiledata.EdgeCase.mirror: // edges are extended
@@ -1251,20 +1307,20 @@ namespace BMG
                                 binary += '1'; // edgeCase (Edge adjacent edge tiles will always be equal when extending)
                             else
                             {
-                                if (hasAdjacentEqualTiles(map, currentX - 1, currentY - 1, tileObject))
+                                if (hasAdjacentEqualTiles(map, currentX - 1, currentY - 1, check))
                                     binary += '1';
-                                else if (hasAdjacentEqualTiles(map, currentX - 1, currentY + 1, tileObject))
+                                else if (hasAdjacentEqualTiles(map, currentX - 1, currentY + 1, check))
                                     binary += '1';
-                                else if (hasAdjacentEqualTiles(map, currentX + 1, currentY - 1, tileObject))
+                                else if (hasAdjacentEqualTiles(map, currentX + 1, currentY - 1, check))
                                     binary += '1';
-                                else if (hasAdjacentEqualTiles(map, currentX + 1, currentY + 1, tileObject))
+                                else if (hasAdjacentEqualTiles(map, currentX + 1, currentY + 1, check))
                                     binary += '1';
                                 else
                                     binary += '0';
                             }
                         // binary = binary + checkNeighboringTile(map, currentX, currentY, tileObject, 7 - x); // edgeCase (check opposite tile to extend)
                         else
-                            binary += checkNeighboringTile(map, currentX, currentY, tileObject, replaces, x); // check tile in map
+                            binary += checkNeighboringTile(map, currentX, currentY, replaces, check, x); // check tile in map
                     }
                     break;
             }
@@ -1272,47 +1328,47 @@ namespace BMG
             return binary;
         }
 
-        public static char checkNeighboringTile(string[] map, int currentX, int currentY, Tiledata.Tile tile, Options1.Replace[] replaces, int neighbor)
+        public static char checkNeighboringTile(MapTile[][] map, int currentX, int currentY, Options1.Replace[] replaces, char check, int neighbor)
         {
             switch (neighbor)
             {
                 case 0:
-                    if (CNTFilter(map[currentY - 1].ToCharArray()[currentX - 1], replaces) == tile.tileCode)
+                    if (CNTFilter(map[currentY - 1][currentX - 1], replaces) == check)
                         return '1';
                     else
                         return '0';
                 case 1:
-                    if (CNTFilter(map[currentY - 1].ToCharArray()[currentX], replaces) == tile.tileCode)
+                    if (CNTFilter(map[currentY - 1][currentX], replaces) == check)
                         return '1';
                     else
                         return '0';
                 case 2:
-                    if (CNTFilter(map[currentY - 1].ToCharArray()[currentX + 1], replaces) == tile.tileCode)
+                    if (CNTFilter(map[currentY - 1][currentX + 1], replaces) == check)
                         return '1';
                     else
                         return '0';
                 case 3:
-                    if (CNTFilter(map[currentY].ToCharArray()[currentX - 1], replaces) == tile.tileCode)
+                    if (CNTFilter(map[currentY][currentX - 1], replaces) == check)
                         return '1';
                     else
                         return '0';
                 case 4:
-                    if (CNTFilter(map[currentY].ToCharArray()[currentX + 1], replaces) == tile.tileCode)
+                    if (CNTFilter(map[currentY][currentX + 1], replaces) == check)
                         return '1';
                     else
                         return '0';
                 case 5:
-                    if (CNTFilter(map[currentY + 1].ToCharArray()[currentX - 1], replaces) == tile.tileCode)
+                    if (CNTFilter(map[currentY + 1][currentX - 1], replaces) == check)
                         return '1';
                     else
                         return '0';
                 case 6:
-                    if (CNTFilter(map[currentY + 1].ToCharArray()[currentX], replaces) == tile.tileCode)
+                    if (CNTFilter(map[currentY + 1][currentX], replaces) == check)
                         return '1';
                     else
                         return '0';
                 case 7:
-                    if (CNTFilter(map[currentY + 1].ToCharArray()[currentX + 1], replaces) == tile.tileCode)
+                    if (CNTFilter(map[currentY + 1][currentX + 1], replaces) == check)
                         return '1';
                     else
                         return '0';
@@ -1321,38 +1377,38 @@ namespace BMG
             }
         }
 
-        private static char CNTFilter(char original, Options1.Replace[] replaces)
+        private static char CNTFilter(MapTile original, Options1.Replace[] replaces)
         {
             foreach (var r in replaces)
-                if (original == r.from)
+                if (original.code == r.from)
                     return r.to;
-            return original;
+            return original.code;
         }
 
-        public static bool hasAdjacentEqualTiles(string[] map, int x, int y, Tiledata.Tile tileObject)
+        public static bool hasAdjacentEqualTiles(MapTile[][] map, int x, int y, char check)
         {
             if (y < 0) // Top edge
             {
                 if (x < 0) // Left corner
                 {
-                    if (map[y + 1].ToCharArray()[x + 1] == tileObject.tileCode)
+                    if (map[y + 1][x + 1].code == check)
                         return true;
                     else return false;
                 }
                 else if (x > map[0].Length - 1) // Right corner
                 {
-                    if (map[y + 1].ToCharArray()[x - 1] == tileObject.tileCode)
+                    if (map[y + 1][x - 1].code == check)
                         return true;
                     else return false;
                 }
                 else // Middle
                 {
                     if (x != map[0].Length - 1)
-                        if (map[y + 1].ToCharArray()[x + 1] == tileObject.tileCode)
+                        if (map[y + 1][x + 1].code == check)
                             return true;
                         else return false;
                     else if (x != 0)
-                        if (map[y + 1].ToCharArray()[x - 1] == tileObject.tileCode)
+                        if (map[y + 1][x - 1].code == check)
                             return true;
                         else return false;
                     else return false;
@@ -1362,24 +1418,24 @@ namespace BMG
             {
                 if (x < 0) // Left corner
                 {
-                    if (map[y - 1].ToCharArray()[x + 1] == tileObject.tileCode)
+                    if (map[y - 1][x + 1].code == check)
                         return true;
                     else return false;
                 }
                 else if (x > map[0].Length - 1) // Right corner
                 {
-                    if (map[y - 1].ToCharArray()[x - 1] == tileObject.tileCode)
+                    if (map[y - 1][x - 1].code == check)
                         return true;
                     else return false;
                 }
                 else // Middle
                 {
                     if (x != map[0].Length - 1)
-                        if (map[y - 1].ToCharArray()[x + 1] == tileObject.tileCode)
+                        if (map[y - 1][x + 1].code == check)
                             return true;
                         else return false;
                     else if (x != 0)
-                        if (map[y - 1].ToCharArray()[x - 1] == tileObject.tileCode)
+                        if (map[y - 1][x - 1].code == check)
                             return true;
                         else return false;
                     else return false;
@@ -1390,11 +1446,11 @@ namespace BMG
                 if (x < 0) // Left edge
                 {
                     if (y != 0)
-                        if (map[y - 1].ToCharArray()[x + 1] == tileObject.tileCode)
+                        if (map[y - 1][x + 1].code == check)
                             return true;
                         else return false;
                     else if (y != map.Length - 1)
-                        if (map[y + 1].ToCharArray()[x + 1] == tileObject.tileCode)
+                        if (map[y + 1][x + 1].code == check)
                             return true;
                         else return false;
                     else return false;
@@ -1402,11 +1458,11 @@ namespace BMG
                 else if (x > map[0].Length - 1) // Right edge
                 {
                     if (y != 0)
-                        if (map[y - 1].ToCharArray()[x - 1] == tileObject.tileCode)
+                        if (map[y - 1][x - 1].code == check)
                             return true;
                         else return false;
                     else if (y != map.Length - 1)
-                        if (map[y + 1].ToCharArray()[x - 1] == tileObject.tileCode)
+                        if (map[y + 1][x - 1].code == check)
                             return true;
                         else return false;
                     else return false;
@@ -1892,7 +1948,7 @@ namespace BMG
 
             public Size size => new Size(data.Length, data[0].Length);
 
-            public string[] data;
+            public MapTile[][] data;
 
             private static int _index = -1;
             public int index => _index;
@@ -1903,12 +1959,12 @@ namespace BMG
             public Map() { }
             public Map(string[] data)
             {
-                this.data = data;
+                this.data = MapTile.ConstructMap(data);
                 _index++;
             }
             public Map(Options1.BatchSettings batch)
             {
-                data = batch.map;
+                this.data = MapTile.ConstructMap(batch.map);
 
                 if (batch.map.Length == 0 || batch.map[0].Length == 0)
                 {
@@ -1921,52 +1977,81 @@ namespace BMG
 
             public void AutoCrop(char[] tiles)
             {
-                Size s = size;
-                int t, b, l = s.width, r = 0;
-                string line;
+                MapTile.CropMap(data, size, tiles);
 
-                for (t = 0; t < s.height; t++)
-                {
-                    line = data[t];
-                    foreach (char c in tiles)
-                        line = line.Replace(c.ToString(), string.Empty);
-                    if (line != string.Empty)
-                        break;
-                }
+                //Size s = size;
+                //int t, b, l = s.width, r = 0;
+                //MapTile[] line;
 
-                for (b = s.height - 1; b >= 0; b--)
-                {
-                    line = data[b];
-                    foreach (char c in tiles)
-                        line = line.Replace(c.ToString(), string.Empty);
-                    if (line != string.Empty)
-                        break;
-                }
+                //for (t = 0; t < s.height; t++)
+                //{
+                //    line = data[t];
+                //    foreach (char c in tiles)
+                //        MapTile.ReplaceRow(line, c, (char)0);
+                //    if (!MapTile.IsRowEmpty(line))
+                //        break;
+                //}
 
-                for (int e = t; e <= b; e++)
-                {
-                    line = data[e];
-                    if (line.Length - line.TrimStart(tiles).Length < l)
-                        l = line.Length - line.TrimStart(tiles).Length;
-                    if (line.Length - line.TrimEnd(tiles).Length < r)
-                        r = line.Length - line.TrimEnd(tiles).Length;
-                }
+                //for (b = s.height - 1; b >= 0; b--)
+                //{
+                //    line = data[b];
+                //    foreach (char c in tiles)
+                //        MapTile.ReplaceRow(line, c, (char)0);
+                //    if (!MapTile.IsRowEmpty(line))
+                //        break;
+                //}
 
-                if (t != 0 || b != s.height - 1 || l != 0 || r != 0)
-                {
-                    data = data
-                        .Skip(t)
-                        .Take(b - t + 1)
-                        .Select(item => item.Substring(l, item.Length - l - r))
-                        .ToArray();
+                //for (int e = t; e <= b; e++)
+                //{
+                //    line = data[e];
+                //    if (line.Length - line.TrimStart(tiles).Length < l)
+                //        l = line.Length - line.TrimStart(tiles).Length;
+                //    if (line.Length - line.TrimEnd(tiles).Length < r)
+                //        r = line.Length - line.TrimEnd(tiles).Length;
+                //}
 
-                    Logger.LogSpacer();
-                    Logger.LogSetup("Auto-Cropped map:", false);
-                    Logger.LogSetup(string.Format(
-                        "  {0} Top\n  {1} Bottom\n  {2} Left\n  {3} Right",
-                        t, s.height - b - 1, l, r
-                    ), false);
-                }
+                //if (t != 0 || b != s.height - 1 || l != 0 || r != 0)
+                //{
+                //    data = data
+                //        .Skip(t)
+                //        .Take(b - t + 1)
+                //        .Select(item => item.Substring(l, item.Length - l - r))
+                //        .ToArray();
+
+                //    Logger.LogSpacer();
+                //    Logger.LogSetup("Auto-Cropped map:", false);
+                //    Logger.LogSetup(string.Format(
+                //        "  {0} Top\n  {1} Bottom\n  {2} Left\n  {3} Right",
+                //        t, s.height - b - 1, l, r
+                //    ), false);
+                //}
+            }
+            public void TagTiles(string tag, char[] affect, int y, int x)
+            {
+                if (y < 0 || x < 0)
+                    return;
+
+                if (y > data.Length - 1 || x > data[y].Length - 1)
+                    return;
+
+                if (!affect.Contains(data[y][x].code))
+                    return;
+
+                if (data[y][x].tags != null && data[y][x].tags.Contains(tag))
+                    return;
+
+                if (data[y][x].tags == null)
+                    data[y][x].tags = new List<string>();
+                data[y][x].tags.Add(tag);
+
+                TagTiles(tag, affect, y - 1, x - 1);
+                TagTiles(tag, affect, y - 1, x);
+                TagTiles(tag, affect, y - 1, x + 1);
+                TagTiles(tag, affect, y, x - 1);
+                TagTiles(tag, affect, y, x + 1);
+                TagTiles(tag, affect, y + 1, x - 1);
+                TagTiles(tag, affect, y + 1, x);
+                TagTiles(tag, affect, y + 1, x + 1);
             }
         }
 
@@ -2018,7 +2103,7 @@ namespace BMG
             }
         }
 
-        public static char ReadAtCursor()
+        public static MapTile ReadAtCursor()
         {
             return map.data[drawer.cursor.y][drawer.cursor.x];
         }

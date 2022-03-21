@@ -192,9 +192,23 @@
                       "description": "The condition in neighboring binary. Possible conditions: 0, 1, *",
                       "type": "string"
                     },
+                    "overrideCode": {
+                      "description": "Overrides how the tile sees itself as. Useful to make it react with other types",
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 1
+                    },
                     "requiredBiome": {
                       "description": "A biome-only condition",
                       "type": "integer"
+                    },
+                    "requiredTag": {
+                      "description": "A tag-only condition",
+                      "type": "string"
+                    },
+                    "requiredGamemode": {
+                      "description": "A gamemode-only condition",
+                      "type": "string"
                     },
                     "changeBinary": {
                       "description": "Change the resulting neighboring binary at certain bytes",
@@ -627,6 +641,67 @@
             },
             "required": [ "tile", "position" ]
           }
+        },
+        "preProcessors": {
+          "description": "Conditional tagging to neighboring tiles",
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "ifTile": {
+                "description": "Must be near a tile of one of these tiles",
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 1
+                },
+                "minItems": 1,
+                "uniqueItems": true
+              },
+              "ifTag": {
+                "description": "Must be near a tile that has been tagged with one of the following",
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "minItems": 1,
+                "uniqueItems": true
+              },
+              "ifOccurance": {
+                "description": "Run on the Nth tile",
+                "type": "integer"
+              },
+              "affectTiles": {
+                "description": "Only affects the listed tiles",
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 1
+                },
+                "minItems": 1
+              },
+              "setTag": {
+                "description": "Sets the tile to contain a tag",
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "default": {
+              "ifTile": [],
+              "setTag": "yourTag"
+            },
+            "required": [ "ifTile", "affectTiles", "setTag" ]
+          },
+          "default": [
+            {
+              "ifTile": [],
+              "affectTiles": [],
+              "setTag": "yourTag"
+            }
+          ]
         }
       }
     }
