@@ -238,6 +238,16 @@
 				"right": 0
 			},
 			"asset": "biodome_wall_1.svg"
+		},
+		{
+			"tileParts": {
+				"top": 500,
+				"mid": 1000,
+				"bot": 250,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "stuntshow_wall_1.svg"
 		}
 		]
 	},
@@ -454,6 +464,16 @@
 				"right": 0
 			},
 			"asset": "biodome_wall_2.svg"
+		},
+		{
+			"tileParts": {
+				"top": 500,
+				"mid": 1000,
+				"bot": 250,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "stuntshow_wall_2.svg"
 		}
 		]
 	},
@@ -570,6 +590,16 @@
 				"right": 0
 			},
 			"asset": "case_brawlywood.svg"
+		},
+		{
+			"tileParts": {
+				"top": 300,
+				"mid": 1000,
+				"bot": 250,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "slingshot_square.svg"
 		}
 		]
 	},
@@ -696,6 +726,16 @@
 				"right": 0
 			},
 			"asset": "biodome_barrel.svg"
+		},
+		{
+			"tileParts": {
+				"top": 400,
+				"mid": 1000,
+				"bot": 350,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "slingshot_round.svg"
 		}
 		]
 	},
@@ -1035,6 +1075,16 @@
 				"right": 50
 			},
 			"asset": "biodome_plant.svg"
+		},
+		{
+			"tileParts": {
+				"top": 450,
+				"mid": 1000,
+				"bot": 250,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "bumper.svg"
 		}
 		]
 	},
@@ -1191,6 +1241,16 @@
 				"right": 0
 			},
 			"asset": "beehive.svg"
+		},
+		{
+			"tileParts": {
+				"top": 250,
+				"mid": 1000,
+				"bot": 200,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "stuntshow_fragile.svg"
 		}
 		]
 	},
@@ -2628,10 +2688,175 @@
 			},
 			"asset": "wall_plant_bl.svg",
 			"orderHor": 1
+		},
+		{
+			"tileParts": {
+				"top": 400,
+				"mid": 1000,
+				"bot": 300,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "stuntshow_fence_hor.svg",
+			"orderHor": 1
+		},
+		{
+			"tileParts": {
+				"top": 600,
+				"mid": 1000,
+				"bot": -600,
+				"left": -50,
+				"right": -50
+			},
+			"asset": "stuntshow_fence_ver.svg",
+			"orderHor": 1
+		},
+		{
+			"tileParts": {
+				"top": 400,
+				"mid": 1000,
+				"bot": 300,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "stuntshow_fence_r.svg",
+			"orderHor": 1
+		},
+		{
+			"tileParts": {
+				"top": 400,
+				"mid": 1000,
+				"bot": 300,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "stuntshow_fence_l.svg",
+			"orderHor": 1
+		},
+		{
+			"tileParts": {
+				"top": 600,
+				"mid": 1000,
+				"bot": 200,
+				"left": -50,
+				"right": -50
+			},
+			"asset": "stuntshow_fence_b.svg",
+			"orderHor": 1
+		},
+		{
+			"tileParts": {
+				"top": 500,
+				"mid": 1000,
+				"bot": 250,
+				"left": -50,
+				"right": -50
+			},
+			"asset": "stuntshow_fence_t.svg",
+			"orderHor": 1
+		},
+		{
+			"tileParts": {
+				"top": 400,
+				"mid": 1000,
+				"bot": 450,
+				"left": -50,
+				"right": 0
+			},
+			"asset": "stuntshow_fence_tr.svg",
+			"orderHor": 1
+		},
+		{
+			"tileParts": {
+				"top": 400,
+				"mid": 1000,
+				"bot": 450,
+				"left": 0,
+				"right": -50
+			},
+			"asset": "stuntshow_fence_tl.svg",
+			"orderHor": 1
+		},
+		{
+			"tileParts": {
+				"top": 950,
+				"mid": 1000,
+				"bot": 300,
+				"left": -50,
+				"right": 0
+			},
+			"asset": "stuntshow_fence_br.svg",
+			"orderHor": 1
+		},
+		{
+			"tileParts": {
+				"top": 950,
+				"mid": 1000,
+				"bot": 300,
+				"left": 0,
+				"right": -50
+			},
+			"asset": "stuntshow_fence_bl.svg",
+			"orderHor": 1
 		}
 		],
 		"tileLinks": {
 			"rules": [
+			{
+				"condition": "***11***",
+				"requiredBiome": 27,
+				"changeTileType": 131
+			},
+			{
+				"condition": "*1****1*",
+				"requiredBiome": 27,
+				"changeTileType": 132
+			},
+			{
+				"condition": "*0*01*0*",
+				"requiredBiome": 27,
+				"changeTileType": 133
+			},
+			{
+				"condition": "*0*10*0*",
+				"requiredBiome": 27,
+				"changeTileType": 134
+			},
+			{
+				"condition": "*1*00*0*",
+				"requiredBiome": 27,
+				"changeTileType": 135
+			},
+			{
+				"condition": "*0*00*1*",
+				"requiredBiome": 27,
+				"changeTileType": 136
+			},
+			{
+				"condition": "*0*01*1*",
+				"requiredBiome": 27,
+				"changeTileType": 137
+			},
+			{
+				"condition": "*0*10*1*",
+				"requiredBiome": 27,
+				"changeTileType": 138
+			},
+			{
+				"condition": "*1*01*0*",
+				"requiredBiome": 27,
+				"changeTileType": 139
+			},
+			{
+				"condition": "*1*10*0*",
+				"requiredBiome": 27,
+				"changeTileType": 140
+			},
+			{
+				"condition": "********",
+				"requiredBiome": 27,
+				"changeTileType": 131
+			},
 			{
 				"condition": "***11***",
 				"requiredBiome": 26,
@@ -4298,6 +4523,50 @@
 			},
 			"asset": "payload_red_side.svg",
 			"order": 3
+		},
+		{
+			"tileParts": {
+				"top": 350,
+				"mid": 1000,
+				"bot": 150,
+				"left": 175,
+				"right": 175
+			},
+			"asset": "pinball.svg",
+			"order": 3
+		},
+		{
+			"tileParts": {
+				"top": 500,
+				"mid": 1000,
+				"bot": 500,
+				"left": 2500,
+				"right": 2500
+			},
+			"asset": "insert_red.svg",
+			"order": -1
+		},
+		{
+			"tileParts": {
+				"top": 500,
+				"mid": 1000,
+				"bot": 500,
+				"left": 2500,
+				"right": 2500
+			},
+			"asset": "insert_blue.svg",
+			"order": -1
+		},
+		{
+			"tileParts": {
+				"top": 450,
+				"mid": 1000,
+				"bot": 650,
+				"left": 450,
+				"right": 450
+			},
+			"asset": "mine_scoop.svg",
+			"order": 3
 		}
 		],
 		"tileLinks": {
@@ -5098,10 +5367,70 @@
 				"right": 575
 			},
 			"asset": "rope_post_biodome_tr.svg"
+		},
+		{
+			"tileParts": {
+				"top": 500,
+				"mid": 1000,
+				"bot": 450,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "rope_post_stuntshow.svg"
+		},
+		{
+			"tileParts": {
+				"top": 700,
+				"mid": 1000,
+				"bot": 450,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "rope_post_stuntshow_t.svg"
+		},
+		{
+			"tileParts": {
+				"top": 500,
+				"mid": 1000,
+				"bot": 450,
+				"left": 0,
+				"right": 550
+			},
+			"asset": "rope_post_stuntshow_r.svg"
+		},
+		{
+			"tileParts": {
+				"top": 700,
+				"mid": 1000,
+				"bot": 450,
+				"left": 0,
+				"right": 550
+			},
+			"asset": "rope_post_stuntshow_tr.svg"
 		}
 		],
 		"tileLinks": {
 			"rules": [
+			{
+				"condition": "*1**1***",
+				"requiredBiome": 27,
+				"changeTileType": 39
+			},
+			{
+				"condition": "*0**1***",
+				"requiredBiome": 27,
+				"changeTileType": 38
+			},
+			{
+				"condition": "*1**0***",
+				"requiredBiome": 27,
+				"changeTileType": 37
+			},
+			{
+				"condition": "********",
+				"requiredBiome": 27,
+				"changeTileType": 36
+			},
 			{
 				"condition": "*1**1***",
 				"requiredBiome": 26,
@@ -5600,6 +5929,17 @@
 				"right": 100
 			},
 			"asset": "number_unk.svg",
+			"order": 4
+		},
+		{
+			"tileParts": {
+				"top": 425,
+				"mid": 1000,
+				"bot": 425,
+				"left": 450,
+				"right": 450
+			},
+			"asset": "bot_drop.svg",
 			"order": 4
 		}
 		]
@@ -7091,6 +7431,57 @@
 				"type": 28
 			}
 			]
+		},
+		{
+			"name": "stuntshow",
+			"background": {
+				"name": "Chequerboard",
+				"parameters": {
+					"color": {
+						"r": 47,
+						"g": 44,
+						"b": 96
+					}
+				}
+			},
+			"defaults": [
+			{
+				"tile": "blocking1",
+				"type": 22
+			},
+			{
+				"tile": "blocking2",
+				"type": 21
+			},
+			{
+				"tile": "blocking3",
+				"type": 11
+			},
+			{
+				"tile": "blocking4",
+				"type": 12
+			},
+			{
+				"tile": "forest",
+				"type": 4
+			},
+			{
+				"tile": "respawningWall",
+				"type": 17
+			},
+			{
+				"tile": "blockingDestroyableWithWeapon",
+				"type": 14
+			},
+			{
+				"tile": "fence",
+				"type": 131
+			},
+			{
+				"tile": "ropeFence",
+				"type": 36
+			}
+			]
 		}
   ],
 	"defaultBiome":
@@ -7445,6 +7836,18 @@
 					"tile": "objective",
 					"type": 40
 				}]
+			},
+			"stuntshow": {
+				"mapModder": [
+				{
+					"tile": "objective",
+					"position": "m,m"
+				}],
+				"overrideBiome": [
+				{
+					"tile": "objective",
+					"type": 52
+				}]
 			}
 		},
     "mapModder": [
@@ -7536,6 +7939,31 @@
 				{
 					"tile": "objective",
 					"type": 17
+				}],
+				"mapModder": [
+				{
+					"tile": "objective",
+					"position": "m,m"
+				}]
+			},
+			"stuntshow": {
+				"specialTiles": [
+				{
+					"tile": "objective",
+					"type": 50,
+					"position": "m,1",
+					"drawOrder": 2
+				},
+				{
+					"tile": "objective",
+					"type": 51,
+					"position": "m,-1",
+					"drawOrder": 2
+				}],
+				"overrideBiome": [
+				{
+					"tile": "objective",
+					"type": 49
 				}],
 				"mapModder": [
 				{
@@ -7862,6 +8290,14 @@
 				"setTag": "redTrack"
 			}
 		]
+	},
+	{
+		"name": "Bot Drop",
+		"overrideBiome": [
+		{
+			"tile": "siegeBolt",
+			"type": 12
+		}]
 	}
 	],
 	"metadata": {
