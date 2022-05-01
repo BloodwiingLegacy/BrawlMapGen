@@ -4438,7 +4438,7 @@
 		},
 		{
 			"tileParts": {
-				"top": 650,
+				"top": 700,
 				"mid": 1000,
 				"bot": 0,
 				"left": 2200,
@@ -4449,7 +4449,7 @@
 		},
 		{
 			"tileParts": {
-				"top": 650,
+				"top": 700,
 				"mid": 1000,
 				"bot": 0,
 				"left": -1800,
@@ -4463,7 +4463,7 @@
 				"top": 2200,
 				"mid": 1000,
 				"bot": -1800,
-				"left": 650,
+				"left": 700,
 				"right": 0
 			},
 			"asset": "payload_blue_side.svg",
@@ -4474,7 +4474,7 @@
 				"top": -1800,
 				"mid": 1000,
 				"bot": 2200,
-				"left": 650,
+				"left": 700,
 				"right": 0
 			},
 			"asset": "payload_blue_side.svg",
@@ -4482,7 +4482,7 @@
 		},
 		{
 			"tileParts": {
-				"top": 650,
+				"top": 700,
 				"mid": 1000,
 				"bot": 0,
 				"left": 2200,
@@ -4493,7 +4493,7 @@
 		},
 		{
 			"tileParts": {
-				"top": 650,
+				"top": 700,
 				"mid": 1000,
 				"bot": 0,
 				"left": -1800,
@@ -4507,7 +4507,7 @@
 				"top": 2200,
 				"mid": 1000,
 				"bot": -1800,
-				"left": 650,
+				"left": 700,
 				"right": 0
 			},
 			"asset": "payload_red_side.svg",
@@ -4518,7 +4518,7 @@
 				"top": -1800,
 				"mid": 1000,
 				"bot": 2200,
-				"left": 650,
+				"left": 700,
 				"right": 0
 			},
 			"asset": "payload_red_side.svg",
@@ -5956,6 +5956,16 @@
 					"left": 0,
 					"right": 0
 				},
+				"asset": "nothing.svg"
+			},
+			{
+				"tileParts": {
+					"top": 0,
+					"mid": 1000,
+					"bot": 0,
+					"left": 0,
+					"right": 0
+				},
 				"asset": "payload_blue_t.svg"
 			},
 			{
@@ -6155,111 +6165,111 @@
 					"condition": "*1**1***",
 					"requiredTag": "redTrack",
 					"requiredGamemode": "Payload",
-					"changeTileType": 19
+					"changeTileType": 20
 				},
 				{
 					"condition": "*1*1****",
+					"requiredTag": "redTrack",
+					"requiredGamemode": "Payload",
+					"changeTileType": 19
+				},
+				{
+					"condition": "****1*1*",
 					"requiredTag": "redTrack",
 					"requiredGamemode": "Payload",
 					"changeTileType": 18
 				},
 				{
-					"condition": "****1*1*",
+					"condition": "***1**1*",
 					"requiredTag": "redTrack",
 					"requiredGamemode": "Payload",
 					"changeTileType": 17
 				},
 				{
-					"condition": "***1**1*",
+					"condition": "*1****1*",
 					"requiredTag": "redTrack",
 					"requiredGamemode": "Payload",
 					"changeTileType": 16
 				},
 				{
-					"condition": "*1****1*",
+					"condition": "***11***",
 					"requiredTag": "redTrack",
 					"requiredGamemode": "Payload",
 					"changeTileType": 15
 				},
 				{
-					"condition": "***11***",
+					"condition": "****1***",
 					"requiredTag": "redTrack",
 					"requiredGamemode": "Payload",
 					"changeTileType": 14
 				},
 				{
-					"condition": "****1***",
+					"condition": "***1****",
 					"requiredTag": "redTrack",
 					"requiredGamemode": "Payload",
 					"changeTileType": 13
 				},
 				{
-					"condition": "***1****",
+					"condition": "*1******",
 					"requiredTag": "redTrack",
 					"requiredGamemode": "Payload",
 					"changeTileType": 12
 				},
 				{
-					"condition": "*1******",
+					"condition": "******1*",
 					"requiredTag": "redTrack",
 					"requiredGamemode": "Payload",
 					"changeTileType": 11
 				},
 				{
-					"condition": "******1*",
-					"requiredTag": "redTrack",
+					"condition": "*1**1***",
 					"requiredGamemode": "Payload",
 					"changeTileType": 10
 				},
 				{
-					"condition": "*1**1***",
+					"condition": "*1*1****",
 					"requiredGamemode": "Payload",
 					"changeTileType": 9
 				},
 				{
-					"condition": "*1*1****",
+					"condition": "****1*1*",
 					"requiredGamemode": "Payload",
 					"changeTileType": 8
 				},
 				{
-					"condition": "****1*1*",
+					"condition": "***1**1*",
 					"requiredGamemode": "Payload",
 					"changeTileType": 7
 				},
 				{
-					"condition": "***1**1*",
+					"condition": "*1****1*",
 					"requiredGamemode": "Payload",
 					"changeTileType": 6
 				},
 				{
-					"condition": "*1****1*",
+					"condition": "***11***",
 					"requiredGamemode": "Payload",
 					"changeTileType": 5
 				},
 				{
-					"condition": "***11***",
+					"condition": "****1***",
 					"requiredGamemode": "Payload",
 					"changeTileType": 4
 				},
 				{
-					"condition": "****1***",
+					"condition": "***1****",
 					"requiredGamemode": "Payload",
 					"changeTileType": 3
 				},
 				{
-					"condition": "***1****",
+					"condition": "*1******",
 					"requiredGamemode": "Payload",
 					"changeTileType": 2
 				},
 				{
-					"condition": "*1******",
-					"requiredGamemode": "Payload",
-					"changeTileType": 1
-				},
-				{
 					"condition": "******1*",
 					"requiredGamemode": "Payload",
-					"changeTileType": 0
+					"changeTileType": 1
 				}
 			],
 			"multipleConditionsCouldApply": false,
