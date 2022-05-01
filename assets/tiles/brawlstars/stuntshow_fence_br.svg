@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="0.94999999"
+   height="2.25"
+   viewBox="0 0 0.94999999 2.25"
+   version="1.1"
+   id="svg5"
+   sodipodi:docname="stuntshow_fence_br.svg"
+   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#171717"
+     bordercolor="#999999"
+     borderopacity="1"
+     inkscape:pageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="px"
+     showgrid="false"
+     units="px"
+     inkscape:zoom="187.83333"
+     inkscape:cx="0.39396629"
+     inkscape:cy="1.4826975"
+     inkscape:window-width="1284"
+     inkscape:window-height="1041"
+     inkscape:window-x="208"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="layer1"
+     inkscape:object-paths="true"
+     inkscape:snap-intersection-paths="true"
+     inkscape:snap-smooth-nodes="true"
+     inkscape:snap-midpoints="true"
+     inkscape:snap-object-midpoints="true">
+    <inkscape:grid
+       type="xygrid"
+       id="grid836"
+       originx="0"
+       originy="0" />
+  </sodipodi:namedview>
+  <defs
+     id="defs2">
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient43734"
+       id="linearGradient130482"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-951.0078,-12)"
+       x1="959"
+       y1="30"
+       x2="958"
+       y2="32" />
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient43734">
+      <stop
+         style="stop-color:#7480b8;stop-opacity:1;"
+         offset="0"
+         id="stop43730" />
+      <stop
+         style="stop-color:#5060a4;stop-opacity:1"
+         offset="1"
+         id="stop43732" />
+    </linearGradient>
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       id="g170641"
+       transform="scale(0.05)"
+       style="stroke-width:20">
+      <rect
+         style="fill:#0f0f37;fill-opacity:0.2;stroke:none;stroke-width:80;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;paint-order:markers stroke fill"
+         id="rect102143-2"
+         width="17"
+         height="12"
+         x="-19"
+         y="33"
+         transform="scale(-1,1)" />
+      <path
+         id="path132337"
+         style="color:#000000;fill:#2c2854;fill-opacity:1;stroke-width:20;stroke-linecap:round;stroke-linejoin:round;-inkscape-stroke:none;paint-order:markers stroke fill"
+         d="m 9,15 c 3.8423,0 7,3.157688 7,7 v 10 c 0,3.842312 -3.1577,7 -7,7 C 5.1577,39 2,35.842312 2,32 V 22 c 0,-3.842312 3.1577,-7 7,-7 z" />
+      <path
+         id="path132339"
+         style="fill:#383870;fill-opacity:1;stroke:none;stroke-width:80;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;paint-order:markers stroke fill"
+         d="m 4,30 v 2 a -5,5 0 0 0 5,5 -5,5 0 0 0 5,-5 V 30 A -5,5 0 0 1 9,35 -5,5 0 0 1 4,30 Z" />
+      <path
+         id="path132341"
+         style="fill:#404080;fill-opacity:1;stroke:none;stroke-width:80;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;paint-order:markers stroke fill"
+         d="M 14,30 A -5,5 0 0 1 9.9414,34.900391 -5,5 0 0 0 11.5098,36.324219 -5,5 0 0 0 14,32 Z" />
+      <path
+         id="path130628"
+         style="color:#000000;fill:#780c38;fill-opacity:1;stroke-width:20;stroke-linecap:round;-inkscape-stroke:none;paint-order:markers stroke fill"
+         d="m 18,0 v 10 c 0,0.575973 0.424,1 1,1 V 35 H 9 C 4.0531,35 0,30.946866 0,26 V 0 Z"
+         sodipodi:nodetypes="csccsscc" />
+      <path
+         id="path125527"
+         style="fill:#7c1c48;fill-opacity:1;stroke:none;stroke-width:80;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;paint-order:markers stroke fill"
+         d="m 19,27 v 6 H 9 C 5.134,33 2,29.865993 2,26 v -6 z"
+         sodipodi:nodetypes="ccsscc" />
+      <path
+         id="path125704"
+         style="fill:#902854;fill-opacity:1;stroke:none;stroke-width:80;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;paint-order:markers stroke fill"
+         d="m 19,24 v 3 H 9 C 5.134,27 2,23.865993 2,20 v -3 z"
+         sodipodi:nodetypes="ccsscc" />
+      <path
+         id="rect125189"
+         style="fill:#b82868;fill-opacity:1;stroke:none;stroke-width:80;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;paint-order:markers stroke fill"
+         d="m 16,0 v 10 a -3,3 0 0 0 3,3 V 24 H 9 A -7,7 0 0 1 2,17 V 0 Z" />
+      <circle
+         style="fill:#2c2854;fill-opacity:1;stroke-width:151.181;stroke-linecap:round;stroke-linejoin:round;paint-order:markers stroke fill"
+         id="circle130474"
+         cx="-9"
+         cy="18"
+         r="5"
+         transform="scale(-1,1)" />
+      <path
+         id="path130476"
+         style="fill:#443c64;fill-opacity:1;stroke-width:151.181;stroke-linecap:round;stroke-linejoin:round;paint-order:markers stroke fill"
+         d="m 12,18 a -3,3 0 0 1 -0.1797,1 H 6.1797 A -3,3 0 0 1 6,18 Z" />
+      <path
+         id="path130478"
+         style="fill:#3c3454;fill-opacity:1;stroke-width:151.181;stroke-linecap:round;stroke-linejoin:round;paint-order:markers stroke fill"
+         d="M 12,18 H 6 a -3,3 0 0 1 0.1719,-1 h 5.6484 A -3,3 0 0 1 12,18 Z" />
+      <path
+         id="path130480"
+         style="fill:url(#linearGradient130482);fill-opacity:1;stroke-width:151.181;stroke-linecap:round;stroke-linejoin:round;paint-order:markers stroke fill"
+         d="m 8.9922,15 a -3,3 0 0 0 -2.8203,2 h 5.6484 A -3,3 0 0 0 8.9922,15 Z m -2.8203,4 a -3,3 0 0 0 2.8203,2 -3,3 0 0 0 2.8203,-2 z" />
+    </g>
+  </g>
+</svg>

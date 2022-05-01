@@ -24,9 +24,9 @@
      inkscape:document-units="px"
      showgrid="false"
      units="px"
-     inkscape:zoom="181.01934"
-     inkscape:cx="0.51375726"
-     inkscape:cy="1.4335485"
+     inkscape:zoom="256"
+     inkscape:cx="0.6875"
+     inkscape:cy="0.47070312"
      inkscape:window-width="1284"
      inkscape:window-height="1041"
      inkscape:window-x="208"
@@ -42,7 +42,7 @@
        type="xygrid"
        id="grid836"
        originx="0"
-       originy="1" />
+       originy="0" />
   </sodipodi:namedview>
   <defs
      id="defs2" />
@@ -51,7 +51,7 @@
      inkscape:groupmode="layer"
      id="layer1">
     <g
-       id="g61178"
+       id="g108892"
        transform="scale(0.05)"
        style="stroke-width:20">
       <rect
@@ -82,6 +82,10 @@
          height="4"
          x="0"
          y="8" />
+      <path
+         id="rect75411"
+         style="fill:#00006c;fill-opacity:1;stroke:none;stroke-width:80;stroke-linecap:round;paint-order:markers stroke fill"
+         d="M 0,0 V 2 H 20 V 0 Z m 0,18 v 2 h 20 v -2 z" />
     </g>
   </g>
 </svg>

@@ -24,15 +24,15 @@
      inkscape:document-units="px"
      showgrid="false"
      units="px"
-     inkscape:zoom="187.83333"
-     inkscape:cx="0.6122449"
-     inkscape:cy="0.78527063"
+     inkscape:zoom="256"
+     inkscape:cx="0.4296875"
+     inkscape:cy="0.083984375"
      inkscape:window-width="1284"
      inkscape:window-height="1041"
      inkscape:window-x="208"
      inkscape:window-y="0"
      inkscape:window-maximized="0"
-     inkscape:current-layer="g62191"
+     inkscape:current-layer="g109200"
      inkscape:object-paths="true"
      inkscape:snap-intersection-paths="true"
      inkscape:snap-smooth-nodes="true"
@@ -51,7 +51,7 @@
      inkscape:groupmode="layer"
      id="layer1">
     <g
-       id="g62191"
+       id="g109200"
        transform="scale(0.05)"
        style="stroke-width:20">
       <path
@@ -70,6 +70,10 @@
          id="path17412"
          style="fill:#4f5593;fill-opacity:1;stroke-width:80;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:0.258856;paint-order:markers stroke fill"
          d="M 20,8 H 17 C 14.23,8 12,5.77 12,3 V 0 H 8 v 5 c 0,3.878 3.122,7 7,7 h 5 z" />
+      <path
+         id="path75461"
+         style="color:#000000;fill:#700000;fill-opacity:1;stroke-width:20;stroke-linecap:round;-inkscape-stroke:none;paint-order:markers stroke fill"
+         d="m 20,0 h -2 a 2,2 0 0 0 2,2 z m 0,18 H 12.5 C 6.70101,18 2,13.29899 2,7.5 V 0 H 0 V 7.5 C 0,14.37986 5.62014,20 12.5,20 H 20 Z" />
     </g>
   </g>
 </svg>
