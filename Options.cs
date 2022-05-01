@@ -17,6 +17,7 @@ namespace BMG
         public BatchSettings[] batch { get; set; }
         public string exportFileName { get; set; } = "bmg_?number?.png";
         public string exportFolderName { get; set; } = "output";
+        public int exportQuality { get; set; } = 70;
         public bool saveLogFile { get; set; } = true;
         public ConsoleOptions console { get; set; } = new ConsoleOptions();
         public Title title { get; set; } = new Title();
@@ -40,6 +41,7 @@ namespace BMG
             public char[] skipTiles { get; set; } = new char[0];
             public Replace[] replaceTiles { get; set; }
             public string exportFileName { get; set; }
+            public int? exportQuality { get; set; } = null;
             public Tiledata.TileDefault[] overrideBiome { get; set; }
             public SpecialTileRules[] specialTileRules { get; set; }
             public float[] emptyBorderAmount { get; set; } = new float[] { 1 };

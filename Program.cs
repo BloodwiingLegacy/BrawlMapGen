@@ -8,6 +8,7 @@ using Newtonsoft.Json;
 using System.Threading;
 using System.Diagnostics;
 using System.Text.RegularExpressions;
+using SkiaSharp;
 
 namespace BMG
 {
@@ -248,8 +249,10 @@ namespace BMG
                     Tiledata.GamemodeBase mapGamemode = null;
                     foreach (var gm in tiledata.gamemodes)
                     {
-                        if (gm == null || batchOption.gamemode == null)
+                        if (batchOption.gamemode == null)
                             break;
+                        if (gm == null)
+                            continue;
                         if (gm.name == batchOption.gamemode)
                         {
                             if (gm.variants != null && gm.variants.TryGetValue(mapBiome.name, out var gamemode))
@@ -387,6 +390,8 @@ namespace BMG
                         int currentY = 0;
                         int currentX = 0;
 
+                        List<Options1.RecordedSTR> rstr = new List<Options1.RecordedSTR>();
+
                         List<OrderedTile> orderedTiles = new List<OrderedTile>();
                         
                         Logger.Title.Status.UpdateStatus(0, xLength * yLength, string.Format("Drawing tiles... PASS {0}", drawPass));
@@ -463,7 +468,6 @@ namespace BMG
                                 // Checking STR (Special Tile Rules) Tiles' occurance number and acting if conditions are met
                                 if (str != null)
                                 {
-                                    List<Options1.RecordedSTR> rstr = new List<Options1.RecordedSTR>();
                                     bool drawn = false;
                                     foreach (var ostr in str)
                                         if (ostr.tileCode == tile.code)
@@ -556,7 +560,7 @@ namespace BMG
                                                         break;
                                                     }
 
-                                            if (batchOption.gamemode != null && mapGamemode != null && mapGamemode.overrideBiome != null) // Biome overrider (from Gamemode options)
+                                            if (mapGamemode != null && mapGamemode.overrideBiome != null) // Biome overrider (from Gamemode options)
                                                 foreach (var overrideTile in mapGamemode.overrideBiome)
                                                     if (overrideTile.tile == tileDefault.tile)
                                                     {
@@ -634,115 +638,114 @@ namespace BMG
 
                                                     string fols = "";
 
-                                                    if (aTile.tileLinks.defaults == null && accurateRules.Count == 0)
-                                                        break;
-
-                                                    // Do actions specified in the rule which were correct
-                                                    int type;
-
-                                                    if (aTile.tileLinks.defaults != null)
-                                                        type = aTile.tileLinks.defaults.tileType;
-                                                    else
-                                                        type = 0;
-
-                                                    var defaultType = aTile.tileTypes[type];
-                                                    foreach (Tiledata.TileLinkRule aRule in accurateRules)
+                                                    if (aTile.tileLinks.defaults != null || accurateRules.Count > 0)
                                                     {
-                                                        if (aRule.changeBinary != null)
-                                                            for (int y = 0; y < aRule.changeBinary.Length; y++)
+                                                        // Do actions specified in the rule which were correct
+                                                        int type;
+
+                                                        if (aTile.tileLinks.defaults != null)
+                                                            type = aTile.tileLinks.defaults.tileType;
+                                                        else
+                                                            type = 0;
+
+
+                                                        foreach (Tiledata.TileLinkRule aRule in accurateRules)
+                                                        {
+                                                            if (aRule.changeBinary != null)
+                                                                for (int y = 0; y < aRule.changeBinary.Length; y++)
+                                                                {
+                                                                    nbca[int.Parse(aRule.changeBinary[y].Split('a')[1])] = aRule.changeBinary[y].Split('a')[0].ToCharArray()[0];
+                                                                }
+                                                            if (aRule.changeTileType != null)
+                                                                type = aRule.changeTileType.GetValueOrDefault();
+                                                            if (aRule.changeFolder != null && aTile.tileLinks.assetFolder != null)
+                                                                fols = aRule.changeFolder + "/";
+                                                        }
+
+                                                        var defaultType = aTile.tileTypes[type];
+                                                        var defaultAsset = defaultType.asset;
+
+                                                        var fullBinaryFinal = string.Join("", nbca);
+
+                                                        if (defaultAsset.Contains("?binary?"))
+                                                            defaultAsset = defaultAsset.Replace("?binary?", fullBinaryFinal);
+
+                                                        if (aTile.tileLinks.assetFolder != null && fols == "")
+                                                            fols = aTile.tileLinks.assetFolder + "/";
+                                                        var assetst = fullBinaryFinal + ".svg";
+
+                                                        // Make a copy of the tile (not reference)
+                                                        Tiledata.TileType breakerTile = new Tiledata.TileType()
+                                                        {
+                                                            asset = fols + defaultAsset,
+                                                            color = defaultType.color,
+                                                            detailed = defaultType.detailed,
+                                                            order = defaultType.order,
+                                                            orderHor = defaultType.orderHor,
+                                                            other = defaultType.other,
+                                                            tileParts = defaultType.tileParts,
+                                                            visible = defaultType.visible,
+                                                        };
+
+                                                        // Save tile for later drawing (Ordering and Horizontal Ordering)
+                                                        if (defaultType.order != null)
+                                                        {
+                                                            if ((drawPass == 0 && defaultType.order < 0) ||
+                                                                (drawPass == 1 && defaultType.order >= 0))
                                                             {
-                                                                nbca[int.Parse(aRule.changeBinary[y].Split('a')[1])] = aRule.changeBinary[y].Split('a')[0].ToCharArray()[0];
+                                                                Logger.LogTile(new TileActionTypes(0, 0, 1, 0, 0), aTile, currentY, currentX, yLength, xLength, Logger.TileEvent.orderedTileDraw);
+                                                                orderedTiles.Add(new OrderedTile()
+                                                                {
+                                                                    tileTypeData = breakerTile,
+                                                                    tileType = type,
+                                                                    xPosition = currentX,
+                                                                    yPosition = currentY,
+                                                                    tileCode = aTile.tileCode,
+                                                                    tileName = aTile.tileName
+                                                                });
                                                             }
-                                                        if (aRule.changeTileType != null)
-                                                        {
-                                                            defaultType = aTile.tileTypes[aRule.changeTileType.GetValueOrDefault()];
-                                                            type = aRule.changeTileType.GetValueOrDefault();
+                                                            tileDrawn = true;
+                                                            break;
                                                         }
-                                                        if (aRule.changeFolder != null && aTile.tileLinks.assetFolder != null)
-                                                            fols = aRule.changeFolder + "/";
-                                                    }
-
-                                                    var defaultAsset = defaultType.asset;
-
-                                                    var fullBinaryFinal = string.Join("", nbca);
-
-                                                    if (defaultAsset.Contains("?binary?"))
-                                                        defaultAsset = defaultAsset.Replace("?binary?", fullBinaryFinal);
-
-                                                    if (aTile.tileLinks.assetFolder != null && fols == "")
-                                                        fols = aTile.tileLinks.assetFolder + "/";
-                                                    var assetst = fullBinaryFinal + ".svg";
-
-                                                    // Make a copy of the tile (not reference)
-                                                    Tiledata.TileType breakerTile = new Tiledata.TileType()
-                                                    {
-                                                        asset = fols + defaultAsset,
-                                                        color = defaultType.color,
-                                                        detailed = defaultType.detailed,
-                                                        order = defaultType.order,
-                                                        orderHor = defaultType.orderHor,
-                                                        other = defaultType.other,
-                                                        tileParts = defaultType.tileParts,
-                                                        visible = defaultType.visible,
-                                                    };
-
-                                                    // Save tile for later drawing (Ordering and Horizontal Ordering)
-                                                    if (defaultType.order != null)
-                                                    {
-                                                        if ((drawPass == 0 && defaultType.order < 0) ||
-                                                            (drawPass == 1 && defaultType.order >= 0))
+                                                        if (defaultType.orderHor != null)
                                                         {
-                                                            Logger.LogTile(new TileActionTypes(0, 0, 1, 0, 0), aTile, currentY, currentX, yLength, xLength, Logger.TileEvent.orderedTileDraw);
-                                                            orderedTiles.Add(new OrderedTile()
+                                                            if ((drawPass == 0 && defaultType.orderHor < 0) ||
+                                                                (drawPass == 1 && defaultType.orderHor >= 0))
                                                             {
-                                                                tileTypeData = breakerTile,
-                                                                tileType = type,
-                                                                xPosition = currentX,
-                                                                yPosition = currentY,
-                                                                tileCode = aTile.tileCode,
-                                                                tileName = aTile.tileName
-                                                            });
+                                                                Logger.LogTile(new TileActionTypes(0, 0, 1, 1, 0), aTile, currentY, currentX, yLength, xLength, Logger.TileEvent.orderedHorTileDraw);
+                                                                orderedHorTiles.Add(new OrderedTile()
+                                                                {
+                                                                    tileTypeData = breakerTile,
+                                                                    tileType = type,
+                                                                    xPosition = currentX,
+                                                                    yPosition = currentY,
+                                                                    tileCode = aTile.tileCode,
+                                                                    tileName = aTile.tileName
+                                                                });
+                                                            }
+                                                            tileDrawn = true;
+                                                            break;
+                                                        }
+
+                                                        // Draw Tile
+                                                        if (drawPass == 1)
+                                                        {
+                                                            tileDrawer.DrawSelectedTile(
+                                                                new OrderedTile()
+                                                                {
+                                                                    tileTypeData = breakerTile,
+                                                                    tileType = type,
+                                                                    xPosition = currentX,
+                                                                    yPosition = currentY,
+                                                                    tileCode = aTile.tileCode,
+                                                                    tileName = aTile.tileName
+                                                                }, options, sizeMultiplier, selectedTileImageList, border);
+                                                            Logger.LogTile(new TileActionTypes(0, 0, 0, 0, 1), aTile, currentY, currentX, yLength, xLength, Logger.TileEvent.tileDraw);
+                                                            AMGState.drawer.DrawnTile();
                                                         }
                                                         tileDrawn = true;
                                                         break;
                                                     }
-                                                    if (defaultType.orderHor != null)
-                                                    {
-                                                        if ((drawPass == 0 && defaultType.orderHor < 0) ||
-                                                            (drawPass == 1 && defaultType.orderHor >= 0))
-                                                        {
-                                                            Logger.LogTile(new TileActionTypes(0, 0, 1, 1, 0), aTile, currentY, currentX, yLength, xLength, Logger.TileEvent.orderedHorTileDraw);
-                                                            orderedHorTiles.Add(new OrderedTile()
-                                                            {
-                                                                tileTypeData = breakerTile,
-                                                                tileType = type,
-                                                                xPosition = currentX,
-                                                                yPosition = currentY,
-                                                                tileCode = aTile.tileCode,
-                                                                tileName = aTile.tileName
-                                                            });
-                                                        }
-                                                        tileDrawn = true;
-                                                        break;
-                                                    }
-
-                                                    // Draw Tile
-                                                    if (drawPass == 1)
-                                                    {
-                                                        tileDrawer.DrawSelectedTile(
-                                                            new OrderedTile() {
-                                                                tileTypeData = breakerTile, 
-                                                                tileType = type,
-                                                                xPosition = currentX,
-                                                                yPosition = currentY,
-                                                                tileCode = aTile.tileCode,
-                                                                tileName = aTile.tileName
-                                                            }, options, sizeMultiplier, selectedTileImageList, border);
-                                                        Logger.LogTile(new TileActionTypes(0, 0, 0, 0, 1), aTile, currentY, currentX, yLength, xLength, Logger.TileEvent.tileDraw);
-                                                        AMGState.drawer.DrawnTile();
-                                                    }
-                                                    tileDrawn = true;
-                                                    break;
                                                 }
 
                                                 // Save tile for later drawing (Ordering and Horizontal Ordering)
@@ -950,13 +953,13 @@ namespace BMG
                                     exportName = exportName.Replace("?number?", bNumberText);
                                 }
 
-                                tileDrawer.ExportImage(options, exportName);
+                                tileDrawer.ExportImage(options, exportName, batchOption.exportQuality);
                                 Logger.LogAAL(Logger.AALDirection.Out, options.exportFolderName + "/" + exportName);
                                 Logger.LogExport(exportName);
                             }
                             else
                             {
-                                tileDrawer.ExportImage(options, exportName);
+                                tileDrawer.ExportImage(options, exportName, batchOption.exportQuality);
                                 Logger.LogAAL(Logger.AALDirection.Out, options.exportFolderName + "/" + exportName);
                                 Logger.LogExport(exportName);
                             }
@@ -964,9 +967,9 @@ namespace BMG
                         else
                         {
                             if (batchOption.exportFileName != null)
-                                tileDrawer.ExportImage(options, batchOption.exportFileName);
+                                tileDrawer.ExportImage(options, batchOption.exportFileName, batchOption.exportQuality);
                             else
-                                tileDrawer.ExportImage(options, exportName);
+                                tileDrawer.ExportImage(options, exportName, batchOption.exportQuality);
                             Logger.LogAAL(Logger.AALDirection.Out, exportName);
                             Logger.LogExport(exportName);
                         }
@@ -974,9 +977,9 @@ namespace BMG
                     else
                     {
                         if (batchOption.exportFileName != null)
-                            tileDrawer.ExportImage(options, batchOption.exportFileName);
+                            tileDrawer.ExportImage(options, batchOption.exportFileName, batchOption.exportQuality);
                         else
-                            tileDrawer.ExportImage(options, exportName);
+                            tileDrawer.ExportImage(options, exportName, batchOption.exportQuality);
                         Logger.LogAAL(Logger.AALDirection.Out, exportName);
                         Logger.LogExport(exportName);
                     }
@@ -1118,14 +1121,14 @@ namespace BMG
 
     public class TileDrawer
     {
-        Graphics g;
-        Bitmap b;
+        SKCanvas c;
+        SKBitmap b;
         Tiledata t;
 
         public TileDrawer(int sizeMultiplier, int horizontalLengthInTiles, int verticalLengthInTiles, float[] borderSize, Tiledata tiledata)
         {
-            b = new Bitmap((int)Math.Round(sizeMultiplier * (borderSize[2] + borderSize[3] + horizontalLengthInTiles)), (int)Math.Round(sizeMultiplier * (borderSize[0] + borderSize[1] + verticalLengthInTiles)));
-            g = Graphics.FromImage(b);
+            b = new SKBitmap((int)Math.Round(sizeMultiplier * (borderSize[2] + borderSize[3] + horizontalLengthInTiles)), (int)Math.Round(sizeMultiplier * (borderSize[0] + borderSize[1] + verticalLengthInTiles)));
+            c = new SKCanvas(b);
             t = tiledata;
         }
 
@@ -1161,7 +1164,7 @@ namespace BMG
 
             var ti = imageMemory.GetTileImage(real);
 
-            g.DrawImage(ti.renderedImage, (int)Math.Round(sizeMultiplier * (currentX + borderSize[2])) - offLeft, (int)Math.Round(sizeMultiplier * (currentY + borderSize[0])) - offTop);
+            c.DrawBitmap(ti.renderedImage, (int)Math.Round(sizeMultiplier * (currentX + borderSize[2])) - offLeft, (int)Math.Round(sizeMultiplier * (currentY + borderSize[0])) - offTop);
             return;
         }
 
@@ -1174,7 +1177,7 @@ namespace BMG
 
             var ti = imageMemory.GetTileImage(real);
 
-            g.DrawImage(ti.renderedImage, (int)Math.Round(sizeMultiplier * (tile.xPosition + borderSize[2])) - offLeft, (int)Math.Round(sizeMultiplier * (tile.yPosition + borderSize[0])) - offTop);
+            c.DrawBitmap(ti.renderedImage, (int)Math.Round(sizeMultiplier * (tile.xPosition + borderSize[2])) - offLeft, (int)Math.Round(sizeMultiplier * (tile.yPosition + borderSize[0])) - offTop);
             return;
         }
 
@@ -1204,11 +1207,11 @@ namespace BMG
 
                 if (result is ColorData color)
                 {
-                    g.FillRectangle(
-                        new SolidBrush(Color.FromArgb(color.r, color.g, color.b)),
+                    c.DrawRect(
                         (int)Math.Round(batchOption.sizeMultiplier * (AMGState.drawer.cursor.x + borderSize[2])),
                         (int)Math.Round(batchOption.sizeMultiplier * (AMGState.drawer.cursor.y + borderSize[0])),
-                        batchOption.sizeMultiplier, batchOption.sizeMultiplier
+                        batchOption.sizeMultiplier, batchOption.sizeMultiplier,
+                        new SKPaint() { Color = new SKColor(color.r, color.g, color.b) }
                     );
                     AMGState.MoveCursor();
                 }
@@ -1217,17 +1220,61 @@ namespace BMG
             }
         }
 
-        public void ExportImage(Options1 optionsObject, string fileName) // Saving the generated image
+        public void ExportImage(Options1 optionsObject, string fileName, int? quality) // Saving the generated image
         {
             if (!Directory.Exists(optionsObject.exportFolderName))
                 Directory.CreateDirectory(optionsObject.exportFolderName);
+
+            string output;
             if (Regex.IsMatch(fileName, "\\S:"))
-                b.Save(fileName, ImageFormat.Png);
+                output = fileName;
             else
-                b.Save(optionsObject.exportFolderName + "/" + fileName, ImageFormat.Png);
+                output = optionsObject.exportFolderName + "/" + fileName;
+
+            SKEncodedImageFormat format;
+            switch (Path.GetExtension(output).ToUpper())
+            {
+                case ".BMP":
+                    format = SKEncodedImageFormat.Bmp;
+                    break;
+
+                case ".JPG":
+                case ".JPEG":
+                case ".JFIF":
+                case ".PJEPG":
+                case ".PJP":
+                    format = SKEncodedImageFormat.Jpeg;
+                    break;
+
+                case ".GIF":
+                    format = SKEncodedImageFormat.Gif;
+                    break;
+
+                case ".PNG":
+                    format = SKEncodedImageFormat.Png;
+                    break;
+
+                case ".WEBP":
+                    format = SKEncodedImageFormat.Webp;
+                    break;
+
+                default:
+                    throw new Exception($"Unknown image format in {output}");
+            }
+
+            if (quality == null)
+                quality = optionsObject.exportQuality;
+
+            if (0 > quality || quality > 100)
+                throw new Exception("Image quality must be within 0-100 range");
+
+            using (Stream s = File.Open(output, FileMode.Create))
+            {
+                b.Encode(s, format, quality.Value);
+            }
 
             b.Dispose();
-            g.Dispose();
+            c.Dispose();
         }
 
         public static string tileLinks(MapTile[][] map, int currentX, int currentY, Tiledata.Tile tileObject, char check, Options1.Replace[] replaces)
@@ -1964,7 +2011,7 @@ namespace BMG
             }
             public Map(Options1.BatchSettings batch)
             {
-                this.data = MapTile.ConstructMap(batch.map);
+                data = MapTile.ConstructMap(batch.map);
 
                 if (batch.map.Length == 0 || batch.map[0].Length == 0)
                 {
@@ -1977,54 +2024,7 @@ namespace BMG
 
             public void AutoCrop(char[] tiles)
             {
-                MapTile.CropMap(data, size, tiles);
-
-                //Size s = size;
-                //int t, b, l = s.width, r = 0;
-                //MapTile[] line;
-
-                //for (t = 0; t < s.height; t++)
-                //{
-                //    line = data[t];
-                //    foreach (char c in tiles)
-                //        MapTile.ReplaceRow(line, c, (char)0);
-                //    if (!MapTile.IsRowEmpty(line))
-                //        break;
-                //}
-
-                //for (b = s.height - 1; b >= 0; b--)
-                //{
-                //    line = data[b];
-                //    foreach (char c in tiles)
-                //        MapTile.ReplaceRow(line, c, (char)0);
-                //    if (!MapTile.IsRowEmpty(line))
-                //        break;
-                //}
-
-                //for (int e = t; e <= b; e++)
-                //{
-                //    line = data[e];
-                //    if (line.Length - line.TrimStart(tiles).Length < l)
-                //        l = line.Length - line.TrimStart(tiles).Length;
-                //    if (line.Length - line.TrimEnd(tiles).Length < r)
-                //        r = line.Length - line.TrimEnd(tiles).Length;
-                //}
-
-                //if (t != 0 || b != s.height - 1 || l != 0 || r != 0)
-                //{
-                //    data = data
-                //        .Skip(t)
-                //        .Take(b - t + 1)
-                //        .Select(item => item.Substring(l, item.Length - l - r))
-                //        .ToArray();
-
-                //    Logger.LogSpacer();
-                //    Logger.LogSetup("Auto-Cropped map:", false);
-                //    Logger.LogSetup(string.Format(
-                //        "  {0} Top\n  {1} Bottom\n  {2} Left\n  {3} Right",
-                //        t, s.height - b - 1, l, r
-                //    ), false);
-                //}
+                data = MapTile.CropMap(data, tiles);
             }
             public void TagTiles(string tag, char[] affect, int y, int x)
             {

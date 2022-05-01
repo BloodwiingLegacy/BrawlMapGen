@@ -1,4 +1,6 @@
-﻿using Svg;
+﻿using SkiaSharp;
+using Svg;
+using Svg.Skia;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -52,7 +54,7 @@ namespace BMG
 
         public class TileImage
         {
-            public Bitmap renderedImage;
+            public SKBitmap renderedImage;
             public string imageName;
             public int imageWidth;
             public int imageHeight;
@@ -67,16 +69,19 @@ namespace BMG
                 imageName = tile.asset;
 
                 Logger.LogAAL(Logger.AALDirection.In, "./assets/tiles/" + optionsObject.preset + "/" + tile.asset);
-                var document = SvgDocument.Open(path);
+                var document = new SKSvg();
+                document.Load(path);
 
-                imageWidth = (int)Math.Round((double)document.Width * sizeMultiplier);
-                imageHeight = (int)Math.Round((double)document.Height * sizeMultiplier);
+                var size = document.Picture.CullRect;
+                imageWidth = (int)Math.Round((double)size.Width * sizeMultiplier);
+                imageHeight = (int)Math.Round((double)size.Height * sizeMultiplier);
 
-                renderedImage = new Bitmap(imageWidth, imageHeight, PixelFormat.Format32bppArgb);
+                renderedImage = new SKBitmap(imageWidth, imageHeight);
 
-                var renderer = SvgRenderer.FromImage(renderedImage);
-                renderer.ScaleTransform(sizeMultiplier, sizeMultiplier);
-                document.Draw(renderer);
+                var canvas = new SKCanvas(renderedImage);
+                canvas.Scale(sizeMultiplier);
+                canvas.DrawPicture(document.Picture);
+                canvas.Flush();
             }
 
         }

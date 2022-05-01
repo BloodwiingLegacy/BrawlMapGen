@@ -62,6 +62,12 @@
             "pattern": "^.+\\.[Pp][Nn][Gg]$",
             "default": "Your_file.png"
           },
+          "exportQuality": {
+            "description": "The quality of the exported map 0-100 (not all image formats support this)",
+            "minimum": 0,
+            "maximum": 100,
+            "type": "number"
+          },
           "overrideBiome": {
             "description": "A few overrides for the selected biome",
             "type": "array",
@@ -183,6 +189,12 @@
     "exportFolderName": {
       "description": "The main folder where to export everything",
       "type": "string"
+    },
+    "exportQuality": {
+      "description": "The quality of the exported map 0-100 (not all image formats support this)",
+      "minimum": 0,
+      "maximum": 100,
+      "type": "number"
     },
     "saveLogFile": {
       "description": "The option to save the console output to a file",
