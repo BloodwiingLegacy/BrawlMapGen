@@ -7481,7 +7481,7 @@
 			},
 			{
 				"tile": "blockingDestroyableWithWeapon",
-				"type": 14
+				"type": 15
 			},
 			{
 				"tile": "fence",
