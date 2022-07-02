@@ -1,0 +1,22 @@
+<?xml version="1.0" ?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1.2000000000000002" height="1.1500000000000001" viewBox="0 0 1.2000000000000002 1.1500000000000001" version="1.1" id="svg5" xml:space="preserve">
+   <defs id="defs2">
+      <linearGradient id="linearGradient89369">
+         <stop style="stop-color:#a86818;stop-opacity:1" offset="0" id="stop89359"/>
+         <stop style="stop-color:#a86820;stop-opacity:1;" offset="0.11111111" id="stop89361"/>
+         <stop style="stop-color:#f49c2c;stop-opacity:1;" offset="0.3888889" id="stop89363"/>
+         <stop style="stop-color:#f49c2c;stop-opacity:1;" offset="0.72222221" id="stop89365"/>
+         <stop style="stop-color:#a86820;stop-opacity:1" offset="1" id="stop89367"/>
+      </linearGradient>
+      <linearGradient xlink:href="#linearGradient89369" id="linearGradient100245" gradientUnits="userSpaceOnUse" gradientTransform="rotate(90,319.5,137.5)" x1="255" y1="60" x2="255" y2="78"/>
+   </defs>
+   <g id="layer1" transform="scale(0.05) translate(-375,-60)">
+      <path id="path100229" style="color:#000000;fill:#9c2c04;fill-opacity:1;stroke-linejoin:round;paint-order:markers stroke fill" d="m 399,72 c 0,-6.60371 -5.39629,-12 -12,-12 -6.60371,0 -12,5.39629 -12,12 0,3.57668 1.58549,6.79725 4.08594,9 h 15.82812 C 397.41451,78.79725 399,75.57668 399,72 Z"/>
+      <path id="path100231" style="color:#000000;fill:#ff5414;stroke-width:4;stroke-linejoin:round;paint-order:markers stroke fill" d="m 397,72 a 10,10 0 0 0 -10,-10 10,10 0 0 0 -10,10 10,10 0 0 0 2.89453,7 h 14.24219 A 10,10 0 0 0 397,72 Z"/>
+      <path id="path100233" style="color:#000000;fill:#643c0c;fill-opacity:1;paint-order:markers stroke fill" d="m 397,74 c 0,-5.49914 -4.50085,-10 -10,-10 -5.49915,0 -10,4.50086 -10,10 v 9 h 20 z"/>
+      <rect style="fill:#744810;fill-opacity:1;stroke:none;stroke-width:2;stroke-linejoin:round;stroke-dasharray:none;paint-order:markers stroke fill" id="rect100235" width="1" height="16" x="82" y="-395" transform="rotate(90)"/>
+      <path id="path100237" style="fill:url(#linearGradient100245);fill-opacity:1;stroke:none;stroke-width:2;stroke-linejoin:round;stroke-dasharray:none;paint-order:markers stroke fill" d="m 395,74 a 8,8 0 0 0 -8,-8 8,8 0 0 0 -8,8 v 8 h 16 z"/>
+      <path id="path100239" style="fill:#f4a440;fill-opacity:1;stroke:none;stroke-width:2;stroke-linejoin:round;stroke-dasharray:none;paint-order:markers stroke fill" d="m 394,80 h -1 v 1 h 1 z m -4,0 h -1 v 1 h 1 z m -5,0 h -1 v 1 h 1 z m -4,0 h -1 v 1 h 1 z"/>
+      <path id="path100241" style="fill:#a06418;fill-opacity:1;stroke:none;stroke-width:2;stroke-linejoin:round;stroke-dasharray:none;paint-order:markers stroke fill" d="m 394,81 h -1 v 1 h 1 z m -4,0 h -1 v 1 h 1 z m -5,0 h -1 v 1 h 1 z m -4,0 h -1 v 1 h 1 z"/>
+   </g>
+</svg>

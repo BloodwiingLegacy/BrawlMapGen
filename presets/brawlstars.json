@@ -248,6 +248,16 @@
 				"right": 0
 			},
 			"asset": "stuntshow_wall_1.svg"
+		},
+		{
+			"tileParts": {
+				"top": 500,
+				"mid": 1000,
+				"bot": 250,
+				"left": 25,
+				"right": 25
+			},
+			"asset": "jellyfish.svg"
 		}
 		]
 	},
@@ -474,6 +484,16 @@
 				"right": 0
 			},
 			"asset": "stuntshow_wall_2.svg"
+		},
+		{
+			"tileParts": {
+				"top": 325,
+				"mid": 1000,
+				"bot": 250,
+				"left": 50,
+				"right": 50
+			},
+			"asset": "coral.svg"
 		}
 		]
 	},
@@ -736,6 +756,16 @@
 				"right": 0
 			},
 			"asset": "slingshot_round.svg"
+		},
+		{
+			"tileParts": {
+				"top": 450,
+				"mid": 1000,
+				"bot": 250,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "oil_barrel.svg"
 		}
 		]
 	},
@@ -1085,6 +1115,16 @@
 				"right": 0
 			},
 			"asset": "bumper.svg"
+		},
+		{
+			"tileParts": {
+				"top": 1250,
+				"mid": 1000,
+				"bot": 300,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "thermal_vent.svg"
 		}
 		]
 	},
@@ -1251,6 +1291,16 @@
 				"right": 0
 			},
 			"asset": "stuntshow_fragile.svg"
+		},
+		{
+			"tileParts": {
+				"top": 4,
+				"mid": 1000,
+				"bot": 250,
+				"left": 25,
+				"right": 25
+			},
+			"asset": "sea_urchin.svg"
 		}
 		]
 	},
@@ -2798,10 +2848,175 @@
 			},
 			"asset": "stuntshow_fence_bl.svg",
 			"orderHor": 1
+		},
+		{
+			"tileParts": {
+				"top": 0,
+				"mid": 1000,
+				"bot": 150,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "pipe_yellow_hor.svg",
+			"orderHor": 1
+		},
+		{
+			"tileParts": {
+				"top": 0,
+				"mid": 1000,
+				"bot": 0,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "pipe_yellow_ver.svg",
+			"orderHor": 1
+		},
+		{
+			"tileParts": {
+				"top": 100,
+				"mid": 1000,
+				"bot": 150,
+				"left": 150,
+				"right": 0
+			},
+			"asset": "pipe_yellow_r.svg",
+			"orderHor": 1
+		},
+		{
+			"tileParts": {
+				"top": 100,
+				"mid": 1000,
+				"bot": 150,
+				"left": 0,
+				"right": 150
+			},
+			"asset": "pipe_yellow_l.svg",
+			"orderHor": 1
+		},
+		{
+			"tileParts": {
+				"top": 0,
+				"mid": 1000,
+				"bot": 50,
+				"left": 100,
+				"right": 100
+			},
+			"asset": "pipe_yellow_b.svg",
+			"orderHor": 1
+		},
+		{
+			"tileParts": {
+				"top": 150,
+				"mid": 1000,
+				"bot": 0,
+				"left": 100,
+				"right": 100
+			},
+			"asset": "pipe_yellow_t.svg",
+			"orderHor": 1
+		},
+		{
+			"tileParts": {
+				"top": 0,
+				"mid": 1000,
+				"bot": 0,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "pipe_yellow_tr.svg",
+			"orderHor": 1
+		},
+		{
+			"tileParts": {
+				"top": 0,
+				"mid": 1000,
+				"bot": 0,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "pipe_yellow_tl.svg",
+			"orderHor": 1
+		},
+		{
+			"tileParts": {
+				"top": 0,
+				"mid": 1000,
+				"bot": 150,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "pipe_yellow_br.svg",
+			"orderHor": 1
+		},
+		{
+			"tileParts": {
+				"top": 0,
+				"mid": 1000,
+				"bot": 150,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "pipe_yellow_bl.svg",
+			"orderHor": 1
 		}
 		],
 		"tileLinks": {
 			"rules": [
+			{
+				"condition": "***11***",
+				"requiredBiome": 28,
+				"changeTileType": 141
+			},
+			{
+				"condition": "*1****1*",
+				"requiredBiome": 28,
+				"changeTileType": 142
+			},
+			{
+				"condition": "*0*01*0*",
+				"requiredBiome": 28,
+				"changeTileType": 143
+			},
+			{
+				"condition": "*0*10*0*",
+				"requiredBiome": 28,
+				"changeTileType": 144
+			},
+			{
+				"condition": "*1*00*0*",
+				"requiredBiome": 28,
+				"changeTileType": 145
+			},
+			{
+				"condition": "*0*00*1*",
+				"requiredBiome": 28,
+				"changeTileType": 146
+			},
+			{
+				"condition": "*0*01*1*",
+				"requiredBiome": 28,
+				"changeTileType": 147
+			},
+			{
+				"condition": "*0*10*1*",
+				"requiredBiome": 28,
+				"changeTileType": 148
+			},
+			{
+				"condition": "*1*01*0*",
+				"requiredBiome": 28,
+				"changeTileType": 149
+			},
+			{
+				"condition": "*1*10*0*",
+				"requiredBiome": 28,
+				"changeTileType": 150
+			},
+			{
+				"condition": "********",
+				"requiredBiome": 28,
+				"changeTileType": 141
+			},
 			{
 				"condition": "***11***",
 				"requiredBiome": 27,
@@ -3792,6 +4007,11 @@
 				"changeFolder": "green_water"
 			},
 			{
+				"condition": "********",
+				"requiredBiome": 28,
+				"changeFolder": "deep_water"
+			},
+			{
 				"condition": "*0******",
 				"changeBinary": [ "0a0", "0a2" ]
 			},
@@ -4566,6 +4786,28 @@
 				"right": 450
 			},
 			"asset": "mine_scoop.svg",
+			"order": 3
+		},
+		{
+			"tileParts": {
+				"top": 2000,
+				"mid": 1000,
+				"bot": -200,
+				"left": 750,
+				"right": 625
+			},
+			"asset": "submarine_vault.svg",
+			"order": 3
+		},
+		{
+			"tileParts": {
+				"top": 400,
+				"mid": 1000,
+				"bot": 700,
+				"left": 450,
+				"right": 450
+			},
+			"asset": "mine_sub.svg",
 			"order": 3
 		}
 		],
@@ -5407,10 +5649,70 @@
 				"right": 550
 			},
 			"asset": "rope_post_stuntshow_tr.svg"
+		},
+		{
+			"tileParts": {
+				"top": 472,
+				"mid": 1000,
+				"bot": 250,
+				"left": -25,
+				"right": -25
+			},
+			"asset": "anchor.svg"
+		},
+		{
+			"tileParts": {
+				"top": 1250,
+				"mid": 1000,
+				"bot": 250,
+				"left": -25,
+				"right": -25
+			},
+			"asset": "anchor_t.svg"
+		},
+		{
+			"tileParts": {
+				"top": 472,
+				"mid": 1000,
+				"bot": 250,
+				"left": -25,
+				"right": 625
+			},
+			"asset": "anchor_r.svg"
+		},
+		{
+			"tileParts": {
+				"top": 1250,
+				"mid": 1000,
+				"bot": 250,
+				"left": -25,
+				"right": 625
+			},
+			"asset": "anchor_tr.svg"
 		}
 		],
 		"tileLinks": {
 			"rules": [
+			{
+				"condition": "*1**1***",
+				"requiredBiome": 28,
+				"changeTileType": 43
+			},
+			{
+				"condition": "*0**1***",
+				"requiredBiome": 28,
+				"changeTileType": 42
+			},
+			{
+				"condition": "*1**0***",
+				"requiredBiome": 28,
+				"changeTileType": 41
+			},
+			{
+				"condition": "********",
+				"requiredBiome": 28,
+				"changeTileType": 40
+			},
 			{
 				"condition": "*1**1***",
 				"requiredBiome": 27,
@@ -7492,6 +7794,57 @@
 				"type": 36
 			}
 			]
+		},
+		{
+			"name": "deepsea",
+			"background": {
+				"name": "Chequerboard",
+				"parameters": {
+					"color": {
+						"r": 55,
+						"g": 46,
+						"b": 70
+					}
+				}
+			},
+			"defaults": [
+			{
+				"tile": "blocking1",
+				"type": 23
+			},
+			{
+				"tile": "blocking2",
+				"type": 22
+			},
+			{
+				"tile": "blocking3",
+				"type": 9
+			},
+			{
+				"tile": "blocking4",
+				"type": 13
+			},
+			{
+				"tile": "forest",
+				"type": 10
+			},
+			{
+				"tile": "respawningWall",
+				"type": 18
+			},
+			{
+				"tile": "blockingDestroyableWithWeapon",
+				"type": 16
+			},
+			{
+				"tile": "fence",
+				"type": 141
+			},
+			{
+				"tile": "ropeFence",
+				"type": 40
+			}
+			]
 		}
   ],
 	"defaultBiome":
@@ -7858,6 +8211,18 @@
 					"tile": "objective",
 					"type": 52
 				}]
+			},
+			"deepsea": {
+				"mapModder": [
+				{
+					"tile": "objective",
+					"position": "m,m"
+				}],
+				"overrideBiome": [
+				{
+					"tile": "objective",
+					"type": 54
+				}]
 			}
 		},
     "mapModder": [
@@ -7886,6 +8251,13 @@
 				{
 					"tile": "objective",
 					"type": 38
+				}]
+			},
+			"deepsea": {
+				"overrideBiome": [
+				{
+					"tile": "objective",
+					"type": 53
 				}]
 			}
 		}

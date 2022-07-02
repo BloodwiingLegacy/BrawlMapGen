@@ -1,0 +1,22 @@
+<?xml version="1.0" ?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1.0" height="1.0" viewBox="0 0 1.0 1.0" version="1.1" id="svg5" xml:space="preserve">
+   <defs id="defs2">
+      <linearGradient id="linearGradient89369">
+         <stop style="stop-color:#a86818;stop-opacity:1" offset="0" id="stop89359"/>
+         <stop style="stop-color:#a86820;stop-opacity:1;" offset="0.11111111" id="stop89361"/>
+         <stop style="stop-color:#f49c2c;stop-opacity:1;" offset="0.3888889" id="stop89363"/>
+         <stop style="stop-color:#f49c2c;stop-opacity:1;" offset="0.72222221" id="stop89365"/>
+         <stop style="stop-color:#a86820;stop-opacity:1" offset="1" id="stop89367"/>
+      </linearGradient>
+      <radialGradient xlink:href="#linearGradient89369" id="radialGradient85769" cx="295" cy="80" fx="295" fy="80" r="9" gradientUnits="userSpaceOnUse" gradientTransform="matrix(2,0,0,2,-295,-80)"/>
+   </defs>
+   <g id="layer1" transform="scale(0.05) translate(-295,-60)">
+      <g id="g91546">
+         <path id="path85742" style="opacity:1;fill:#643c0c;fill-opacity:1;stroke:none;stroke-width:2;stroke-linejoin:round;stroke-dasharray:none;paint-order:markers stroke fill" d="m 295,60 v 20 h 20 A 20,20 0 0 0 295,60 Z"/>
+         <path id="path85744" style="opacity:1;fill:url(#radialGradient85769);fill-opacity:1;stroke:none;stroke-width:2;stroke-linejoin:round;stroke-dasharray:none;paint-order:markers stroke fill" d="M 296,62.029297 V 78.267578 A 2,2 0 0 1 296.73242,79 H 312.9707 C 312.4695,69.855843 305.14416,62.530505 296,62.029297 Z"/>
+         <path id="rect85748" style="opacity:1;fill:#f4a440;fill-opacity:1;stroke:none;stroke-width:2;stroke-linejoin:round;stroke-dasharray:none;paint-order:markers stroke fill" d="m 297,63 v 1 h 1 v -1 z m 0,4 v 1 h 1 v -1 z m 0,5 v 1 h 1 v -1 z m 0,4 v 1 h 1 v -1 z m 4,0 v 1 h 1 v -1 z m 6,0 v 1 h 1 v -1 z m 4,0 v 1 h 1 v -1 z"/>
+         <path id="path89889" style="opacity:1;fill:#a06418;fill-opacity:1;stroke:none;stroke-width:2;stroke-linejoin:round;stroke-dasharray:none;paint-order:markers stroke fill" d="m 297,64 v 1 h 1 v -1 z m 0,4 v 1 h 1 v -1 z m 0,5 v 1 h 1 v -1 z m 0,4 v 1 h 1 v -1 z m 4,0 v 1 h 1 v -1 z m 6,0 v 1 h 1 v -1 z m 4,0 v 1 h 1 v -1 z"/>
+         <path id="path91535" style="opacity:1;fill:#744810;fill-opacity:1;stroke:none;stroke-width:2;stroke-linejoin:round;stroke-dasharray:none;paint-order:markers stroke fill" d="m 295,62 v 16 a 2,2 0 0 1 1,0.267578 V 62.029297 C 295.66865,62.011135 295.33589,62 295,62 Z m 1.73242,17 A 2,2 0 0 1 297,80 h 16 c 0,-0.335888 -0.0111,-0.668648 -0.0293,-1 z"/>
+      </g>
+   </g>
+</svg>

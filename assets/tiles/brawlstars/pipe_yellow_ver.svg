@@ -1,0 +1,22 @@
+<?xml version="1.0" ?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1.0" height="1.0" viewBox="0 0 1.0 1.0" version="1.1" id="svg5" xml:space="preserve">
+   <defs id="defs2">
+      <linearGradient id="linearGradient89369">
+         <stop style="stop-color:#a86818;stop-opacity:1" offset="0" id="stop89359"/>
+         <stop style="stop-color:#a86820;stop-opacity:1;" offset="0.11111111" id="stop89361"/>
+         <stop style="stop-color:#f49c2c;stop-opacity:1;" offset="0.3888889" id="stop89363"/>
+         <stop style="stop-color:#f49c2c;stop-opacity:1;" offset="0.72222221" id="stop89365"/>
+         <stop style="stop-color:#a86820;stop-opacity:1" offset="1" id="stop89367"/>
+      </linearGradient>
+      <linearGradient xlink:href="#linearGradient89369" id="linearGradient85493" gradientUnits="userSpaceOnUse" x1="255" y1="60" x2="255" y2="78" gradientTransform="translate(-185,-350)"/>
+   </defs>
+   <g id="layer1" transform="scale(0.05) translate(-270,-60)">
+      <g id="g94113">
+         <rect style="fill:#643c0c;fill-opacity:1;stroke:none;stroke-width:2;stroke-linejoin:round;stroke-dasharray:none;paint-order:markers stroke fill" id="rect85481" width="20" height="20" x="60" y="-290" transform="rotate(90)"/>
+         <rect style="fill:#744810;fill-opacity:1;stroke:none;stroke-width:2;stroke-linejoin:round;stroke-dasharray:none;paint-order:markers stroke fill" id="rect85483" width="20" height="16" x="60" y="-288" transform="rotate(90)"/>
+         <rect style="fill:url(#linearGradient85493);fill-opacity:1;stroke:none;stroke-width:2;stroke-linejoin:round;stroke-dasharray:none;paint-order:markers stroke fill" id="rect85485" width="18" height="16" x="61" y="-288" transform="rotate(90)"/>
+         <path id="path85487" style="fill:#f4a440;fill-opacity:1;stroke:none;stroke-width:2;stroke-linejoin:round;stroke-dasharray:none;paint-order:markers stroke fill" d="m 287,62 h -1 v 1 h 1 z m 0,15 h -1 v 1 h 1 z m -4,-15 h -1 v 1 h 1 z m 0,15 h -1 v 1 h 1 z m -5,-15 h -1 v 1 h 1 z m 0,15 h -1 v 1 h 1 z m -4,-15 h -1 v 1 h 1 z m 0,15 h -1 v 1 h 1 z"/>
+         <path id="path85489" style="fill:#a06418;fill-opacity:1;stroke:none;stroke-width:2;stroke-linejoin:round;stroke-dasharray:none;paint-order:markers stroke fill" d="m 287,63 h -1 v 1 h 1 z m 0,15 h -1 v 1 h 1 z m -4,-15 h -1 v 1 h 1 z m 0,15 h -1 v 1 h 1 z m -5,-15 h -1 v 1 h 1 z m 0,15 h -1 v 1 h 1 z m -4,-15 h -1 v 1 h 1 z m 0,15 h -1 v 1 h 1 z"/>
+      </g>
+   </g>
+</svg>
