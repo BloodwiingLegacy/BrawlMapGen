@@ -6580,6 +6580,22 @@
 				"tileType": 0
 			}
 		}
+	},
+	{
+		"tileName": "bouncer",
+		"tileCode": "o",
+		"tileTypes": [
+		{
+			"tileParts": {
+				"top": 450,
+				"mid": 1000,
+				"bot": 250,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "bumper.svg"
+		}
+		]
 	}
 	],
 	"biomes": [
@@ -8012,6 +8028,10 @@
 		},
 		{
 			"tile": "payloadTrack",
+			"type": 0
+		},
+		{
+			"tile": "bouncer",
 			"type": 0
 		}
 		]
