@@ -258,6 +258,16 @@
 				"right": 25
 			},
 			"asset": "jellyfish.svg"
+		},
+		{
+			"tileParts": {
+				"top": 500,
+				"mid": 1000,
+				"bot": 250,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "factory_wall_1.svg"
 		}
 		]
 	},
@@ -494,6 +504,16 @@
 				"right": 50
 			},
 			"asset": "coral.svg"
+		},
+		{
+			"tileParts": {
+				"top": 500,
+				"mid": 1000,
+				"bot": 250,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "factory_wall_2.svg"
 		}
 		]
 	},
@@ -620,6 +640,16 @@
 				"right": 0
 			},
 			"asset": "slingshot_square.svg"
+		},
+		{
+			"tileParts": {
+				"top": 500,
+				"mid": 1000,
+				"bot": 250,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "crate_copper.svg"
 		}
 		]
 	},
@@ -766,6 +796,16 @@
 				"right": 0
 			},
 			"asset": "oil_barrel.svg"
+		},
+		{
+			"tileParts": {
+				"top": 550,
+				"mid": 1000,
+				"bot": 300,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "factory_barrel.svg"
 		}
 		]
 	},
@@ -1125,6 +1165,16 @@
 				"right": 0
 			},
 			"asset": "thermal_vent.svg"
+		},
+		{
+			"tileParts": {
+				"top": 550,
+				"mid": 1000,
+				"bot": 300,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "factory_vent.svg"
 		}
 		]
 	},
@@ -1301,6 +1351,16 @@
 				"right": 25
 			},
 			"asset": "sea_urchin.svg"
+		},
+		{
+			"tileParts": {
+				"top": 100,
+				"mid": 1000,
+				"bot": 200,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "red_light.svg"
 		}
 		]
 	},
@@ -2958,10 +3018,175 @@
 			},
 			"asset": "pipe_yellow_bl.svg",
 			"orderHor": 1
+		},
+		{
+			"tileParts": {
+				"top": 500,
+				"mid": 1000,
+				"bot": 150,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "factory_wall_hor.svg",
+			"orderHor": 1
+		},
+		{
+			"tileParts": {
+				"top": 500,
+				"mid": 1000,
+				"bot": 0,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "factory_wall_ver.svg",
+			"orderHor": 1
+		},
+		{
+			"tileParts": {
+				"top": 500,
+				"mid": 1000,
+				"bot": 150,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "factory_wall_r.svg",
+			"orderHor": 1
+		},
+		{
+			"tileParts": {
+				"top": 500,
+				"mid": 1000,
+				"bot": 150,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "factory_wall_l.svg",
+			"orderHor": 1
+		},
+		{
+			"tileParts": {
+				"top": 500,
+				"mid": 1000,
+				"bot": 200,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "factory_wall_b.svg",
+			"orderHor": 1
+		},
+		{
+			"tileParts": {
+				"top": 500,
+				"mid": 1000,
+				"bot": 0,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "factory_wall_t.svg",
+			"orderHor": 1
+		},
+		{
+			"tileParts": {
+				"top": 500,
+				"mid": 1000,
+				"bot": 0,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "factory_wall_tr.svg",
+			"orderHor": 1
+		},
+		{
+			"tileParts": {
+				"top": 500,
+				"mid": 1000,
+				"bot": 0,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "factory_wall_tl.svg",
+			"orderHor": 1
+		},
+		{
+			"tileParts": {
+				"top": 500,
+				"mid": 1000,
+				"bot": 150,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "factory_wall_br.svg",
+			"orderHor": 1
+		},
+		{
+			"tileParts": {
+				"top": 500,
+				"mid": 1000,
+				"bot": 150,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "factory_wall_bl.svg",
+			"orderHor": 1
 		}
 		],
 		"tileLinks": {
 			"rules": [
+			{
+				"condition": "***11***",
+				"requiredBiome": 29,
+				"changeTileType": 151
+			},
+			{
+				"condition": "*1****1*",
+				"requiredBiome": 29,
+				"changeTileType": 152
+			},
+			{
+				"condition": "*0*01*0*",
+				"requiredBiome": 29,
+				"changeTileType": 153
+			},
+			{
+				"condition": "*0*10*0*",
+				"requiredBiome": 29,
+				"changeTileType": 154
+			},
+			{
+				"condition": "*1*00*0*",
+				"requiredBiome": 29,
+				"changeTileType": 155
+			},
+			{
+				"condition": "*0*00*1*",
+				"requiredBiome": 29,
+				"changeTileType": 156
+			},
+			{
+				"condition": "*0*01*1*",
+				"requiredBiome": 29,
+				"changeTileType": 157
+			},
+			{
+				"condition": "*0*10*1*",
+				"requiredBiome": 29,
+				"changeTileType": 158
+			},
+			{
+				"condition": "*1*01*0*",
+				"requiredBiome": 29,
+				"changeTileType": 159
+			},
+			{
+				"condition": "*1*10*0*",
+				"requiredBiome": 29,
+				"changeTileType": 160
+			},
+			{
+				"condition": "********",
+				"requiredBiome": 29,
+				"changeTileType": 151
+			},
 			{
 				"condition": "***11***",
 				"requiredBiome": 28,
@@ -3978,6 +4203,11 @@
 			"rules": [
 			{
 				"condition": "********",
+				"requiredBiome": 29,
+				"changeFolder": "factory_water"
+			},
+			{
+				"condition": "********",
 				"requiredBiome": 26,
 				"changeFolder": "biodome_water"
 			},
@@ -4026,6 +4256,21 @@
 			{
 				"condition": "******0*",
 				"changeBinary": [ "0a5", "0a7" ]
+			},
+			{
+				"condition": "*0*0****",
+				"requiredBiome": 29,
+				"changeTileType": 3
+			},
+			{
+				"condition": "*1*0****",
+				"requiredBiome": 29,
+				"changeTileType": 2
+			},
+			{
+				"condition": "*0*1****",
+				"requiredBiome": 29,
+				"changeTileType": 1
 			},
 			{
 				"condition": "*0*0****",
@@ -4808,6 +5053,17 @@
 				"right": 450
 			},
 			"asset": "mine_sub.svg",
+			"order": 3
+		},
+		{
+			"tileParts": {
+				"top": 350,
+				"mid": 1000,
+				"bot": 500,
+				"left": 500,
+				"right": 500
+			},
+			"asset": "mine_factory.svg",
 			"order": 3
 		}
 		],
@@ -5695,6 +5951,26 @@
 			"rules": [
 			{
 				"condition": "*1**1***",
+				"requiredBiome": 29,
+				"changeTileType": 19
+			},
+			{
+				"condition": "*0**1***",
+				"requiredBiome": 29,
+				"changeTileType": 18
+			},
+			{
+				"condition": "*1**0***",
+				"requiredBiome": 29,
+				"changeTileType": 17
+			},
+			{
+				"condition": "********",
+				"requiredBiome": 29,
+				"changeTileType": 16
+			},
+			{
+				"condition": "*1**1***",
 				"requiredBiome": 28,
 				"changeTileType": 43
 			},
@@ -6084,7 +6360,7 @@
 		]
 	},
 	{
-		"tileName": "siegeBolt",
+		"tileName": "gameMapItem",
 		"tileCode": "g",
 		"tileTypes": [
 		{
@@ -6243,6 +6519,52 @@
 			},
 			"asset": "bot_drop.svg",
 			"order": 4
+		},
+		{
+			"tileParts": {
+				"top": 550,
+				"mid": 1000,
+				"bot": 950,
+				"left": 750,
+				"right": 750
+			},
+			"asset": "coin_2.svg",
+			"randomizer": [
+				{
+					"tileParts": {
+						"top": 800,
+						"mid": 1000,
+						"bot": 800,
+						"left": 750,
+						"right": 750
+					},
+					"asset": "coin_0.svg"
+				},
+				{
+					"tileParts": {
+						"top": 750,
+						"mid": 1000,
+						"bot": 850,
+						"left": 750,
+						"right": 750
+					},
+					"asset": "coin_1.svg"
+				},
+				{
+					"asset": "coin_2.svg"
+				},
+				{
+					"tileParts": {
+						"top": 750,
+						"mid": 1000,
+						"bot": 850,
+						"left": 750,
+						"right": 750
+					},
+					"asset": "coin_3.svg"
+				}
+			],
+			"orderHor": 3
 		}
 		]
 	},
@@ -6594,6 +6916,22 @@
 				"right": 0
 			},
 			"asset": "bumper.svg"
+		}
+		]
+	},
+	{
+		"tileName": "8Bit",
+		"tileCode": "m",
+		"tileTypes": [
+		{
+			"tileParts": {
+				"top": 250,
+				"mid": 1000,
+				"bot": 250,
+				"left": 225,
+				"right": 225
+			},
+			"asset": "8bit_icon.svg"
 		}
 		]
 	}
@@ -7580,257 +7918,26 @@
       }
       ]
     },
-		{
-			"name": "castle",
-			"background": {
-				"name": "Chequerboard",
-				"parameters": {
-					"color": {
-						"r": 73,
-						"g": 68,
-						"b": 99
-					}
+	{
+		"name": "castle",
+		"background": {
+			"name": "Chequerboard",
+			"parameters": {
+				"color": {
+					"r": 73,
+					"g": 68,
+					"b": 99
 				}
-			},
-			"defaults": [
-				{
-					"tile": "blocking1",
-					"type": 17
-				},
-				{
-					"tile": "blocking2",
-					"type": 17
-				},
-				{
-					"tile": "blocking3",
-					"type": 9
-				},
-				{
-					"tile": "blocking4",
-					"type": 3
-				},
-				{
-					"tile": "forest",
-					"type": 11
-				},
-				{
-					"tile": "respawningWall",
-					"type": 14
-				},
-				{
-					"tile": "blockingDestroyableWithWeapon",
-					"type": 12
-				},
-				{
-					"tile": "fence",
-					"type": 105
-				}
-			]
-		},
-		{
-			"name": "brawlywood",
-			"background": {
-				"name": "Chequerboard",
-				"parameters": {
-					"color": {
-						"r": 175,
-						"g": 116,
-						"b": 135
-					}
-				}
-			},
-			"defaults": [
-				{
-					"tile": "blocking1",
-					"type": 18
-				},
-				{
-					"tile": "blocking2",
-					"type": 18
-				},
-				{
-					"tile": "blocking3",
-					"type": 10
-				},
-				{
-					"tile": "blocking4",
-					"type": 9
-				},
-				{
-					"tile": "blockingDestroyableWithWeapon",
-					"type": 3
-				},
-				{
-					"tile": "fence",
-					"type": 106
-				}
-			]
-		},
-		{
-			"name": "fighting",
-			"background": {
-				"name": "Chequerboard",
-				"parameters": {
-					"color": {
-						"r": 186,
-						"g": 123,
-						"b": 86
-					}
-				}
-			},
-			"defaults": [
-			{
-				"tile": "blocking1",
-				"type": 19
-			},
-			{
-				"tile": "blocking2",
-				"type": 19
-			},
-			{
-				"tile": "blocking4",
-				"type": 10
-			},
-			{
-				"tile": "forest",
-				"type": 12
-			},
-			{
-				"tile": "respawningWall",
-				"type": 15
-			},
-			{
-				"tile": "blockingDestroyableWithWeapon",
-				"type": 13
-			},
-			{
-				"tile": "fence",
-				"type": 110
-			},
-			{
-				"tile": "ropeFence",
-				"type": 28
 			}
-			]
 		},
-		{
-			"name": "biodome",
-			"background": {
-				"name": "Chequerboard",
-				"parameters": {
-					"color": {
-						"r": 36,
-						"g": 69,
-						"b": 128
-					}
-				}
-			},
-			"defaults": [
+		"defaults": [
 			{
 				"tile": "blocking1",
-				"type": 21
-			},
-			{
-				"tile": "blocking2",
-				"type": 20
-			},
-			{
-				"tile": "blocking4",
-				"type": 11
-			},
-			{
-				"tile": "forest",
-				"type": 10
-			},
-			{
-				"tile": "respawningWall",
-				"type": 16
-			},
-			{
-				"tile": "blockingDestroyableWithWeapon",
-				"type": 14
-			},
-			{
-				"tile": "fence",
-				"type": 121
-			},
-			{
-				"tile": "ropeFence",
-				"type": 28
-			}
-			]
-		},
-		{
-			"name": "stuntshow",
-			"background": {
-				"name": "Chequerboard",
-				"parameters": {
-					"color": {
-						"r": 47,
-						"g": 44,
-						"b": 96
-					}
-				}
-			},
-			"defaults": [
-			{
-				"tile": "blocking1",
-				"type": 22
-			},
-			{
-				"tile": "blocking2",
-				"type": 21
-			},
-			{
-				"tile": "blocking3",
-				"type": 11
-			},
-			{
-				"tile": "blocking4",
-				"type": 12
-			},
-			{
-				"tile": "forest",
-				"type": 4
-			},
-			{
-				"tile": "respawningWall",
 				"type": 17
 			},
 			{
-				"tile": "blockingDestroyableWithWeapon",
-				"type": 15
-			},
-			{
-				"tile": "fence",
-				"type": 131
-			},
-			{
-				"tile": "ropeFence",
-				"type": 36
-			}
-			]
-		},
-		{
-			"name": "deepsea",
-			"background": {
-				"name": "Chequerboard",
-				"parameters": {
-					"color": {
-						"r": 55,
-						"g": 46,
-						"b": 70
-					}
-				}
-			},
-			"defaults": [
-			{
-				"tile": "blocking1",
-				"type": 23
-			},
-			{
 				"tile": "blocking2",
-				"type": 22
+				"type": 17
 			},
 			{
 				"tile": "blocking3",
@@ -7838,31 +7945,313 @@
 			},
 			{
 				"tile": "blocking4",
-				"type": 13
+				"type": 3
 			},
 			{
 				"tile": "forest",
-				"type": 10
+				"type": 11
 			},
 			{
 				"tile": "respawningWall",
-				"type": 18
+				"type": 14
 			},
 			{
 				"tile": "blockingDestroyableWithWeapon",
-				"type": 16
+				"type": 12
 			},
 			{
 				"tile": "fence",
-				"type": 141
+				"type": 105
+			}
+		]
+	},
+	{
+		"name": "brawlywood",
+		"background": {
+			"name": "Chequerboard",
+			"parameters": {
+				"color": {
+					"r": 175,
+					"g": 116,
+					"b": 135
+				}
+			}
+		},
+		"defaults": [
+			{
+				"tile": "blocking1",
+				"type": 18
 			},
 			{
-				"tile": "ropeFence",
-				"type": 40
+				"tile": "blocking2",
+				"type": 18
+			},
+			{
+				"tile": "blocking3",
+				"type": 10
+			},
+			{
+				"tile": "blocking4",
+				"type": 9
+			},
+			{
+				"tile": "blockingDestroyableWithWeapon",
+				"type": 3
+			},
+			{
+				"tile": "fence",
+				"type": 106
 			}
-			]
+		]
+	},
+	{
+		"name": "fighting",
+		"background": {
+			"name": "Chequerboard",
+			"parameters": {
+				"color": {
+					"r": 186,
+					"g": 123,
+					"b": 86
+				}
+			}
+		},
+		"defaults": [
+		{
+			"tile": "blocking1",
+			"type": 19
+		},
+		{
+			"tile": "blocking2",
+			"type": 19
+		},
+		{
+			"tile": "blocking4",
+			"type": 10
+		},
+		{
+			"tile": "forest",
+			"type": 12
+		},
+		{
+			"tile": "respawningWall",
+			"type": 15
+		},
+		{
+			"tile": "blockingDestroyableWithWeapon",
+			"type": 13
+		},
+		{
+			"tile": "fence",
+			"type": 110
+		},
+		{
+			"tile": "ropeFence",
+			"type": 28
 		}
-  ],
+		]
+	},
+	{
+		"name": "biodome",
+		"background": {
+			"name": "Chequerboard",
+			"parameters": {
+				"color": {
+					"r": 36,
+					"g": 69,
+					"b": 128
+				}
+			}
+		},
+		"defaults": [
+		{
+			"tile": "blocking1",
+			"type": 21
+		},
+		{
+			"tile": "blocking2",
+			"type": 20
+		},
+		{
+			"tile": "blocking4",
+			"type": 11
+		},
+		{
+			"tile": "forest",
+			"type": 10
+		},
+		{
+			"tile": "respawningWall",
+			"type": 16
+		},
+		{
+			"tile": "blockingDestroyableWithWeapon",
+			"type": 14
+		},
+		{
+			"tile": "fence",
+			"type": 121
+		},
+		{
+			"tile": "ropeFence",
+			"type": 28
+		}
+		]
+	},
+	{
+		"name": "stuntshow",
+		"background": {
+			"name": "Chequerboard",
+			"parameters": {
+				"color": {
+					"r": 47,
+					"g": 44,
+					"b": 96
+				}
+			}
+		},
+		"defaults": [
+		{
+			"tile": "blocking1",
+			"type": 22
+		},
+		{
+			"tile": "blocking2",
+			"type": 21
+		},
+		{
+			"tile": "blocking3",
+			"type": 11
+		},
+		{
+			"tile": "blocking4",
+			"type": 12
+		},
+		{
+			"tile": "forest",
+			"type": 4
+		},
+		{
+			"tile": "respawningWall",
+			"type": 17
+		},
+		{
+			"tile": "blockingDestroyableWithWeapon",
+			"type": 15
+		},
+		{
+			"tile": "fence",
+			"type": 131
+		},
+		{
+			"tile": "ropeFence",
+			"type": 36
+		}
+		]
+	},
+	{
+		"name": "deepsea",
+		"background": {
+			"name": "Chequerboard",
+			"parameters": {
+				"color": {
+					"r": 55,
+					"g": 46,
+					"b": 70
+				}
+			}
+		},
+		"defaults": [
+		{
+			"tile": "blocking1",
+			"type": 23
+		},
+		{
+			"tile": "blocking2",
+			"type": 22
+		},
+		{
+			"tile": "blocking3",
+			"type": 9
+		},
+		{
+			"tile": "blocking4",
+			"type": 13
+		},
+		{
+			"tile": "forest",
+			"type": 10
+		},
+		{
+			"tile": "respawningWall",
+			"type": 18
+		},
+		{
+			"tile": "blockingDestroyableWithWeapon",
+			"type": 16
+		},
+		{
+			"tile": "fence",
+			"type": 141
+		},
+		{
+			"tile": "ropeFence",
+			"type": 40
+		}
+		]
+	},
+	{
+		"name": "robotfactory",
+		"background": {
+			"name": "Chequerboard",
+			"parameters": {
+				"color": {
+					"r": 127,
+					"g": 53,
+					"b": 83
+				}
+			}
+		},
+		"defaults": [
+		{
+			"tile": "blocking1",
+			"type": 24
+		},
+		{
+			"tile": "blocking2",
+			"type": 23
+		},
+		{
+			"tile": "blocking3",
+			"type": 12
+		},
+		{
+			"tile": "blocking4",
+			"type": 14
+		},
+		{
+			"tile": "forest",
+			"type": 2
+		},
+		{
+			"tile": "respawningWall",
+			"type": 19
+		},
+		{
+			"tile": "blockingDestroyableWithWeapon",
+			"type": 17
+		},
+		{
+			"tile": "fence",
+			"type": 151
+		},
+		{
+			"tile": "ropeFence",
+			"type": 40
+		}
+		]
+	}
+  	],
 	"defaultBiome":
 	{
 		"name": "invalid biome",
@@ -8023,7 +8412,7 @@
 			"type": 0
 		},
 		{
-			"tile": "siegeBolt",
+			"tile": "gameMapItem",
 			"type": 0
 		},
 		{
@@ -8032,6 +8421,10 @@
 		},
 		{
 			"tile": "bouncer",
+			"type": 0
+		},
+		{
+			"tile": "8Bit",
 			"type": 0
 		}
 		]
@@ -8242,6 +8635,18 @@
 				{
 					"tile": "objective",
 					"type": 54
+				}]
+			},
+			"robotfactory": {
+				"mapModder": [
+				{
+					"tile": "objective",
+					"position": "m,m"
+				}],
+				"overrideBiome": [
+				{
+					"tile": "objective",
+					"type": 55
 				}]
 			}
 		},
@@ -8697,55 +9102,63 @@
 		"name": "Bot Drop",
 		"overrideBiome": [
 		{
-			"tile": "siegeBolt",
+			"tile": "gameMapItem",
 			"type": 12
+		}]
+	},
+	{
+		"name": "Last Stand",
+		"overrideBiome": [
+		{
+			"tile": "gameMapItem",
+			"type": 13
 		}]
 	}
 	],
 	"metadata": {
 		"bolts": [
 			{
-				"tile": "siegeBolt",
+				"tile": "gameMapItem",
 				"type": 1
 			},
 			{
-				"tile": "siegeBolt",
+				"tile": "gameMapItem",
 				"type": 2
 			},
 			{
-				"tile": "siegeBolt",
+				"tile": "gameMapItem",
 				"type": 3
 			},
 			{
-				"tile": "siegeBolt",
+				"tile": "gameMapItem",
 				"type": 4
 			},
 			{
-				"tile": "siegeBolt",
+				"tile": "gameMapItem",
 				"type": 5
 			},
 			{
-				"tile": "siegeBolt",
+				"tile": "gameMapItem",
 				"type": 6
 			},
 			{
-				"tile": "siegeBolt",
+				"tile": "gameMapItem",
 				"type": 7
 			},
 			{
-				"tile": "siegeBolt",
+				"tile": "gameMapItem",
 				"type": 8
 			},
 			{
-				"tile": "siegeBolt",
+				"tile": "gameMapItem",
 				"type": 9
 			},
 			{
-				"tile": "siegeBolt",
+				"tile": "gameMapItem",
 				"type": 10
 			},
 			{
-				"tile": "siegeBolt",
+				"tile": "gameMapItem",
 				"type": 11
 			}
 		]

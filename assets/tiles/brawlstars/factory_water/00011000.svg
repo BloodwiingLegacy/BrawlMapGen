@@ -1,0 +1,50 @@
+<?xml version="1.0" ?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" width="1" height="1.2" viewBox="0 0 1 1.2" version="1.1" id="svg5" sodipodi:docname="00011000.svg" inkscape:version="1.1 (c68e22c387, 2021-05-23)">
+   
+  
+   <sodipodi:namedview id="namedview7" pagecolor="#171717" bordercolor="#999999" borderopacity="1" inkscape:pageshadow="0" inkscape:pageopacity="0" inkscape:pagecheckerboard="0" inkscape:document-units="px" showgrid="false" units="px" inkscape:zoom="187.83333" inkscape:cx="0.56965395" inkscape:cy="0.95563443" inkscape:window-width="1284" inkscape:window-height="1041" inkscape:window-x="208" inkscape:window-y="0" inkscape:window-maximized="0" inkscape:current-layer="g149020" inkscape:object-paths="true" inkscape:snap-intersection-paths="true" inkscape:snap-smooth-nodes="true" inkscape:snap-midpoints="true" inkscape:snap-object-midpoints="true">
+      
+    
+      <inkscape:grid type="xygrid" id="grid836" originx="0" originy="0"/>
+      
+  
+   </sodipodi:namedview>
+   
+  
+   <defs id="defs2"/>
+   
+  
+   <g inkscape:label="Layer 1" inkscape:groupmode="layer" id="layer1">
+      
+    
+      <g id="g149020">
+         
+      
+         <g id="g2176" transform="scale(0.05)" style="stroke-width:20">
+            
+        
+            <rect style="fill:#002450;fill-opacity:1;stroke:none;stroke-width:755.907;stroke-linecap:round;stroke-linejoin:round;paint-order:markers stroke fill" id="rect84045" width="20" height="10.999985" x="0" y="8"/>
+            
+        
+            <path id="rect84047" style="fill:#5c4000;fill-opacity:1;stroke:none;stroke-width:755.907;stroke-linecap:round;stroke-linejoin:round;paint-order:markers stroke fill" d="M 0,0 V 3 H 20 V 0 Z m 0,21 v 3 h 20 v -3 z"/>
+            
+        
+            <path id="rect84049" style="fill:#a46c1c;fill-opacity:1;stroke:none;stroke-width:755.907;stroke-linecap:round;stroke-linejoin:round;paint-order:markers stroke fill" d="M 0,2 V 6 L 1,9 H 19 L 20,6 V 2 Z m 0,16 v 4 h 20 v -4 z"/>
+            
+        
+            <path id="rect84051" style="fill:#ff9024;fill-opacity:1;stroke:none;stroke-width:755.907;stroke-linecap:round;stroke-linejoin:round;paint-order:markers stroke fill" d="M 1,2 V 6 H 19 V 2 Z m 0,16 v 4 h 18 v -4 z"/>
+            
+        
+            <path id="path84059" style="fill:#602800;fill-opacity:1;stroke:none;stroke-width:755.907;stroke-linecap:round;stroke-linejoin:round;paint-order:markers stroke fill" d="M 0,6 V 9 H 1 V 6 Z m 19,0 v 3 h 1 V 6 Z"/>
+            
+      
+         </g>
+         
+    
+      </g>
+      
+  
+   </g>
+   
+
+</svg>
