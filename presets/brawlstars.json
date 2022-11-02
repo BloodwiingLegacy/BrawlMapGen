@@ -268,6 +268,16 @@
 				"right": 0
 			},
 			"asset": "factory_wall_1.svg"
+		},
+		{
+			"tileParts": {
+				"top": 500,
+				"mid": 1000,
+				"bot": 250,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "ghostmetro_wall_1.svg"
 		}
 		]
 	},
@@ -514,6 +524,16 @@
 				"right": 0
 			},
 			"asset": "factory_wall_2.svg"
+		},
+		{
+			"tileParts": {
+				"top": 500,
+				"mid": 1000,
+				"bot": 250,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "ghostmetro_wall_2.svg"
 		}
 		]
 	},
@@ -968,6 +988,18 @@
 			"color": "green voxel",
 			"asset": "grass_voxel.svg",
 			"tileTransitions": true
+		},
+		{
+			"tileParts": {
+				"top": 500,
+				"mid": 1000,
+				"bot": 250,
+				"left": 0,
+				"right": 0
+			},
+			"color": "pine green",
+			"asset": "grass_pine.svg",
+			"tileTransitions": true
 		}
 		]
 	},
@@ -1175,6 +1207,16 @@
 				"right": 0
 			},
 			"asset": "factory_vent.svg"
+		},
+		{
+			"tileParts": {
+				"top": 450,
+				"mid": 1000,
+				"bot": 300,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "ticket_booth.svg"
 		}
 		]
 	},
@@ -1361,6 +1403,16 @@
 				"right": 0
 			},
 			"asset": "red_light.svg"
+		},
+		{
+			"tileParts": {
+				"top": 450,
+				"mid": 1000,
+				"bot": 300,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "blue_bucket.svg"
 		}
 		]
 	},
@@ -3128,10 +3180,179 @@
 			},
 			"asset": "factory_wall_bl.svg",
 			"orderHor": 1
+		},
+		{
+			"tileParts": {
+				"top": 550,
+				"mid": 1000,
+				"bot": 150,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "bench_hor.svg",
+			"orderHor": 1
+		},
+		{
+			"tileParts": {
+				"top": 550,
+				"mid": 1000,
+				"bot": -550,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "bench_ver.svg",
+			"orderHor": 1
+		},
+		{
+			"tileParts": {
+				"top": 550,
+				"mid": 1000,
+				"bot": 150,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "bench_r.svg",
+			"orderHor": 1
+		},
+		{
+			"tileParts": {
+				"top": 550,
+				"mid": 1000,
+				"bot": 150,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "bench_l.svg",
+			"orderHor": 1
+		},
+		{
+			"tileParts": {
+				"top": 550,
+				"mid": 1000,
+				"bot": -50,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "bench_b.svg",
+			"orderHor": 1
+		},
+		{
+			"tileParts": {
+				"top": 550,
+				"mid": 1000,
+				"bot": -550,
+				"left": 0,
+				"right": 0
+			},
+			"asset": "bench_t.svg",
+			"orderHor": 1
+		},
+		{
+			"tileParts": {
+				"top": 550,
+				"mid": 1000,
+				"bot": 150,
+				"left": 0,
+				"right": 0
+			},
+			"@comment": "bench_tr.svg",
+			"asset": "bench_r.svg",
+			"orderHor": 1
+		},
+		{
+			"tileParts": {
+				"top": 550,
+				"mid": 1000,
+				"bot": 150,
+				"left": 0,
+				"right": 0
+			},
+			"@comment": "bench_tl.svg",
+			"asset": "bench_l.svg",
+			"orderHor": 1
+		},
+		{
+			"tileParts": {
+				"top": 550,
+				"mid": 1000,
+				"bot": 150,
+				"left": 0,
+				"right": 0
+			},
+			"@comment": "bench_br.svg",
+			"asset": "bench_r.svg",
+			"orderHor": 1
+		},
+		{
+			"tileParts": {
+				"top": 550,
+				"mid": 1000,
+				"bot": 150,
+				"left": 0,
+				"right": 0
+			},
+			"@comment": "bench_bl.svg",
+			"asset": "bench_l.svg",
+			"orderHor": 1
 		}
 		],
 		"tileLinks": {
 			"rules": [
+			{
+				"condition": "***11***",
+				"requiredBiome": 30,
+				"changeTileType": 161
+			},
+			{
+				"condition": "*1****1*",
+				"requiredBiome": 30,
+				"changeTileType": 162
+			},
+			{
+				"condition": "*0*01*0*",
+				"requiredBiome": 30,
+				"changeTileType": 163
+			},
+			{
+				"condition": "*0*10*0*",
+				"requiredBiome": 30,
+				"changeTileType": 164
+			},
+			{
+				"condition": "*1*00*0*",
+				"requiredBiome": 30,
+				"changeTileType": 165
+			},
+			{
+				"condition": "*0*00*1*",
+				"requiredBiome": 30,
+				"changeTileType": 166
+			},
+			{
+				"condition": "*0*01*1*",
+				"requiredBiome": 30,
+				"changeTileType": 167
+			},
+			{
+				"condition": "*0*10*1*",
+				"requiredBiome": 30,
+				"changeTileType": 168
+			},
+			{
+				"condition": "*1*01*0*",
+				"requiredBiome": 30,
+				"changeTileType": 169
+			},
+			{
+				"condition": "*1*10*0*",
+				"requiredBiome": 30,
+				"changeTileType": 170
+			},
+			{
+				"condition": "********",
+				"requiredBiome": 29,
+				"changeTileType": 151
+			},
 			{
 				"condition": "***11***",
 				"requiredBiome": 29,
@@ -4203,6 +4424,11 @@
 			"rules": [
 			{
 				"condition": "********",
+				"requiredBiome": 30,
+				"changeFolder": "green_water"
+			},
+			{
+				"condition": "********",
 				"requiredBiome": 29,
 				"changeFolder": "factory_water"
 			},
@@ -5064,6 +5290,17 @@
 				"right": 500
 			},
 			"asset": "mine_factory.svg",
+			"order": 3
+		},
+		{
+			"tileParts": {
+				"top": 840,
+				"mid": 1000,
+				"bot": 840,
+				"left": 1100,
+				"right": 950
+			},
+			"asset": "mine_ghostmetro.svg",
 			"order": 3
 		}
 		],
@@ -5945,10 +6182,70 @@
 				"right": 625
 			},
 			"asset": "anchor_tr.svg"
+		},
+		{
+			"tileParts": {
+				"top": 700,
+				"mid": 1000,
+				"bot": 100,
+				"left": -100,
+				"right": -100
+			},
+			"asset": "rope_post_ghostmetro.svg"
+		},
+		{
+			"tileParts": {
+				"top": 1325,
+				"mid": 1000,
+				"bot": 100,
+				"left": -100,
+				"right": -100
+			},
+			"asset": "rope_post_ghostmetro_t.svg"
+		},
+		{
+			"tileParts": {
+				"top": 700,
+				"mid": 1000,
+				"bot": 100,
+				"left": -100,
+				"right": 500
+			},
+			"asset": "rope_post_ghostmetro_r.svg"
+		},
+		{
+			"tileParts": {
+				"top": 1325,
+				"mid": 1000,
+				"bot": 100,
+				"left": -100,
+				"right": 500
+			},
+			"asset": "rope_post_ghostmetro_tr.svg"
 		}
 		],
 		"tileLinks": {
 			"rules": [
+			{
+				"condition": "*1**1***",
+				"requiredBiome": 30,
+				"changeTileType": 47
+			},
+			{
+				"condition": "*0**1***",
+				"requiredBiome": 30,
+				"changeTileType": 46
+			},
+			{
+				"condition": "*1**0***",
+				"requiredBiome": 30,
+				"changeTileType": 45
+			},
+			{
+				"condition": "********",
+				"requiredBiome": 30,
+				"changeTileType": 44
+			},
 			{
 				"condition": "*1**1***",
 				"requiredBiome": 29,
@@ -8250,6 +8547,57 @@
 			"type": 40
 		}
 		]
+	},
+	{
+		"name": "ghostmetro",
+		"background": {
+			"name": "Chequerboard",
+			"parameters": {
+				"color": {
+					"r": 55,
+					"g": 57,
+					"b": 112
+				}
+			}
+		},
+		"defaults": [
+		{
+			"tile": "blocking1",
+			"type": 25
+		},
+		{
+			"tile": "blocking2",
+			"type": 24
+		},
+		{
+			"tile": "blocking3",
+			"type": 3
+		},
+		{
+			"tile": "blocking4",
+			"type": 3
+		},
+		{
+			"tile": "forest",
+			"type": 13
+		},
+		{
+			"tile": "respawningWall",
+			"type": 20
+		},
+		{
+			"tile": "blockingDestroyableWithWeapon",
+			"type": 18
+		},
+		{
+			"tile": "fence",
+			"type": 161
+		},
+		{
+			"tile": "ropeFence",
+			"type": 44
+		}
+		]
 	}
   	],
 	"defaultBiome":
@@ -8647,6 +8995,18 @@
 				{
 					"tile": "objective",
 					"type": 55
+				}]
+			},
+			"ghostmetro": {
+				"mapModder": [
+				{
+					"tile": "objective",
+					"position": "m,m"
+				}],
+				"overrideBiome": [
+				{
+					"tile": "objective",
+					"type": 56
 				}]
 			}
 		},
