@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 24.1.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1"
+	 id="svg3893" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:svg="http://www.w3.org/2000/svg"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1 2.75"
+	 enable-background="new 0 0 1 2.75" xml:space="preserve">
+<g>
+	<g id="layer1" transform="translate(-58.076041,-83.563447)" inkscape:groupmode="layer" inkscape:label="Layer 1">
+		<g id="g5189" transform="matrix(0.04999992,0,0,0.04999992,48.987619,88.425163)">
+			<g id="g5167">
+				<path id="path5163" sodipodi:nodetypes="sssssss" fill="#720E2C" d="M191.772-97.234c-1.636,0-3.001,1.364-3.001,3v15.999
+					c0,1.636,1.365,3.001,3.001,3.001s2.994-1.365,2.994-3.001v-15.999C194.765-95.87,193.408-97.234,191.772-97.234z"/>
+				<path id="path5165" sodipodi:nodetypes="sssssss" fill="#EF2061" d="M191.768-95.734c0.831,0,1.5,0.669,1.5,1.5v16.002
+					c0,0.831-0.669,1.5-1.5,1.5s-1.5-0.669-1.5-1.5v-16.002C190.268-95.065,190.937-95.734,191.768-95.734z"/>
+			</g>
+		</g>
+	</g>
+	<g>
+		<ellipse id="ellipse5169" fill-opacity="0.18" cx="0.5" cy="2.075" rx="0.5" ry="0.5"/>
+		<path id="path5001_1_" fill="#6E1600" d="M0.5,1.575c-0.179,0-0.325,0.147-0.325,0.325V2c0,0.179,0.147,0.325,0.325,0.325
+			S0.825,2.179,0.825,2V1.9C0.825,1.721,0.679,1.575,0.5,1.575z"/>
+		<path id="path5003_1_" fill="#AE6801" d="M0.5,1.651c-0.139,0-0.251,0.112-0.251,0.251l0,0v0.1c0,0.139,0.112,0.251,0.251,0.251
+			l0,0c0.139,0,0.251-0.112,0.251-0.251l0,0V1.9C0.751,1.763,0.639,1.651,0.5,1.651L0.5,1.651z"/>
+		<circle id="circle5005_1_" fill="#AC660B" cx="0.5" cy="1.9" r="0.251"/>
+		<path id="path5009_1_" fill="#BD790B" d="M0.251,1.877c0,0.008-0.001,0.016-0.001,0.024c0,0.139,0.112,0.251,0.251,0.251l0,0
+			c0.139,0,0.251-0.112,0.251-0.251l0,0c0-0.008,0-0.016-0.001-0.025C0.736,2.004,0.629,2.101,0.5,2.101
+			C0.372,2.101,0.264,2.004,0.251,1.877z"/>
+		<path id="path5007_1_" sodipodi:nodetypes="sssssss" fill="#3F1938" d="M0.5,1.021c-0.096,0-0.175,0.08-0.175,0.176V1.9
+			c0,0.096,0.079,0.176,0.175,0.176S0.675,1.996,0.675,1.9V1.197C0.675,1.101,0.596,1.021,0.5,1.021z"/>
+		
+			<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="0.6" y1="1.1625" x2="0.4005" y2="1.1625" gradientTransform="matrix(1 0 0 1 0 0.4)">
+			<stop  offset="0" style="stop-color:#4E0D41"/>
+			<stop  offset="1" style="stop-color:#38082D"/>
+		</linearGradient>
+		<path fill="url(#SVGID_1_)" d="M0.6,1.225V1.9C0.6,1.955,0.556,2,0.5,2C0.477,2,0.457,1.993,0.441,1.981
+			c-0.004-0.002-0.008-0.006-0.012-0.01C0.412,1.953,0.4,1.928,0.4,1.9V1.225c0-0.055,0.044-0.1,0.1-0.1
+			c0.019,0,0.036,0.005,0.051,0.015C0.58,1.156,0.6,1.188,0.6,1.225z"/>
+		<path fill="#C195CF" d="M0.6,1.847v0.052c0,0.055-0.044,0.1-0.1,0.1c-0.023,0-0.043-0.007-0.059-0.019L0.6,1.847z"/>
+		<polygon fill="#C195CF" points="0.6,1.473 0.6,1.655 0.4,1.82 0.4,1.64 		"/>
+		<path fill="#C195CF" d="M0.485,1.375L0.4,1.445V1.356C0.427,1.367,0.456,1.373,0.485,1.375z"/>
+		<path fill="#6E1600" d="M0.775,1.1c0,0.152-0.124,0.275-0.275,0.275c-0.005,0-0.009,0-0.015-0.001
+			c-0.029,0-0.059-0.007-0.085-0.017C0.297,1.316,0.225,1.216,0.225,1.1c0-0.151,0.124-0.275,0.275-0.275S0.775,0.949,0.775,1.1z"/>
+		
+			<radialGradient id="circle5015_2_" cx="-41.7761" cy="-113.3253" r="1.4112" gradientTransform="matrix(0.1416 0 0 -0.1417 6.4812 -15.0307)" gradientUnits="userSpaceOnUse">
+			<stop  offset="0" style="stop-color:#EFA518"/>
+			<stop  offset="1" style="stop-color:#AB6506"/>
+		</radialGradient>
+		<circle id="circle5015_1_" fill="url(#circle5015_2_)" cx="0.5" cy="1.1" r="0.2"/>
+	</g>
+</g>
+</svg>

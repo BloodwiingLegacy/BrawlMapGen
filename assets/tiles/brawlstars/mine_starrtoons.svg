@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 24.1.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1"
+	 id="svg5" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:svg="http://www.w3.org/2000/svg"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1.9 2.1"
+	 enable-background="new 0 0 1.9 2.1" xml:space="preserve">
+<g id="layer1" inkscape:groupmode="layer" inkscape:label="Layer 1">
+	<g id="g2373" transform="scale(0.05)">
+		<circle id="circle64964" fill="#0A0F32" fill-opacity="0.2" cx="19" cy="23" r="19"/>
+		<circle id="circle41320" fill="#282444" cx="19" cy="19" r="19"/>
+		<path fill="#FF8BBC" d="M19,2v32C10.4,34,3.199,27.601,2,19V18.4C2.4,9.2,9.8,2,19,2z"/>
+		<path fill="#55A027" d="M36,18.4V19c-1.2,8.601-8.4,15-17,15V2C28.199,2,35.601,9.2,36,18.4z"/>
+		<circle id="circle41324" fill="#3C3C5E" cx="19" cy="18" r="13"/>
+		<path id="circle41328" fill="#5F5F86" d="M19,10c-6.639,0-12.021,5.381-12.022,12.02c0,0,0,0.001,0,0.001
+			c0.01,0.354,0.035,0.707,0.076,1.059C9.09,27.875,13.791,30.992,19,31c5.209-0.008,9.91-3.125,11.945-7.92
+			c0.041-0.352,0.066-0.705,0.076-1.059C31.022,15.383,25.64,10,19.001,10C19.001,10,19,10,19,10z"/>
+		<circle id="circle41330" fill="#7D7DA2" cx="18" cy="20" r="7"/>
+		<circle id="circle41332" fill="#2C2C44" cx="19" cy="19" r="7"/>
+		<path id="circle41334" fill="#1C1C28" d="M19,14c-3.48-0.001-6.433,2.555-6.93,6c0.497,3.445,3.449,6.001,6.93,6
+			c3.478,0,6.429-2.554,6.928-5.996C25.432,16.559,22.481,14.001,19,14z"/>
+		<path id="circle57540" fill="#7D7DA2" d="M19,8C12.361,8,6.979,13.381,6.978,20.02c0,0,0,0.001,0,0.001
+			c0.01,0.334,0.034,0.668,0.072,1C7.569,14.803,12.76,10.015,19,10c6.182,0,11.356,4.688,11.963,10.84
+			c0.029-0.272,0.049-0.545,0.059-0.818C31.022,13.383,25.641,8,19.002,8C19.001,8,19.001,8,19,8z"/>
+		<path fill="#FF8BBC" fill-opacity="0.2537" d="M19,34V36C9.6,36,2,28.4,2,19C3.199,27.601,10.4,34,19,34z"/>
+		<path fill="#55A027" fill-opacity="0.2537" d="M36,19C36,28.4,28.4,36,19,36V34C27.6,34,34.8,27.601,36,19z"/>
+	</g>
+</g>
+</svg>
