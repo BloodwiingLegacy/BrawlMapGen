@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 24.1.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1"
+	 id="svg557535" inkscape:version="1.1 (c68e22c387, 2021-05-23)" sodipodi:docname="grass_teal.svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:svg="http://www.w3.org/2000/svg"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1 1.7"
+	 enable-background="new 0 0 1 1.7" xml:space="preserve">
+<g>
+	<g id="layer1" transform="translate(-121.67183,-117.98447)" inkscape:groupmode="layer" inkscape:label="Layer 1">
+		<g id="g442793" transform="matrix(0.04999591,0,0,0.05,43.956848,121.95322)">
+			<path id="path6005-3-5-3-4" sodipodi:nodetypes="csssscc" fill="#0A0F32" fill-opacity="0.2" d="M1574.417-51.375v4
+				c0,1.108-0.892,2-2,2h-16c-1.108,0-2-0.892-2-2v-4H1574.417z"/>
+		</g>
+	</g>
+	<g>
+		<path fill="#CD6CAB" d="M1,0.1v0.7H0V0.1C0,0.045,0.045,0,0.1,0h0.25c0.055,0,0.1,0.045,0.1,0.1v0.1h0.1V0.1
+			c0-0.055,0.045-0.1,0.1-0.1H0.9C0.955,0,1,0.045,1,0.1z"/>
+		<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="0.5" y1="0.8" x2="0.5" y2="0.1">
+			<stop  offset="0" style="stop-color:#BE3E90"/>
+			<stop  offset="0.75" style="stop-color:#C34C97"/>
+		</linearGradient>
+		<path fill="url(#SVGID_1_)" d="M1,0.2v0.6H0V0.2c0-0.055,0.045-0.1,0.1-0.1h0.25c0.055,0,0.1,0.045,0.1,0.1v0.1h0.1V0.2
+			c0-0.055,0.045-0.1,0.1-0.1H0.9C0.955,0.1,1,0.145,1,0.2z"/>
+	</g>
+	<g>
+		<path fill="#CD6CAB" d="M1,0.35v0.8H0v-0.8h0.125c0.055,0,0.1,0.045,0.1,0.1v0.1h0.05v-0.1c0-0.055,0.045-0.1,0.1-0.1h0.25
+			c0.055,0,0.1,0.045,0.1,0.1v0.1h0.05v-0.1c0-0.055,0.045-0.1,0.1-0.1H1z"/>
+		<linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="0.5" y1="1.15" x2="0.5" y2="0.45">
+			<stop  offset="0" style="stop-color:#BE3E90"/>
+			<stop  offset="0.75" style="stop-color:#C34C97"/>
+		</linearGradient>
+		<path fill="url(#SVGID_2_)" d="M1,0.45v0.7H0v-0.7h0.125c0.055,0,0.1,0.045,0.1,0.1v0.1h0.05v-0.1c0-0.055,0.045-0.1,0.1-0.1h0.25
+			c0.055,0,0.1,0.045,0.1,0.1v0.1h0.05v-0.1c0-0.055,0.045-0.1,0.1-0.1H1z"/>
+	</g>
+	<g>
+		<path fill="#CD6CAB" d="M1,0.8v0.65H0V0.8c0-0.055,0.045-0.1,0.1-0.1h0.25c0.055,0,0.1,0.045,0.1,0.1v0.15h0.1V0.8
+			c0-0.055,0.045-0.1,0.1-0.1H0.9C0.955,0.7,1,0.745,1,0.8z"/>
+		<linearGradient id="SVGID_3_" gradientUnits="userSpaceOnUse" x1="0.5" y1="1.45" x2="0.5" y2="0.8">
+			<stop  offset="0" style="stop-color:#C22B89"/>
+			<stop  offset="0.75" style="stop-color:#D1429B"/>
+		</linearGradient>
+		<path fill="url(#SVGID_3_)" d="M1,0.9v0.55H0V0.9c0-0.018,0.005-0.036,0.014-0.05C0.031,0.82,0.063,0.8,0.1,0.8h0.25
+			c0.037,0,0.069,0.02,0.086,0.05C0.445,0.864,0.45,0.882,0.45,0.9v0.15h0.1V0.9c0-0.018,0.005-0.036,0.014-0.05
+			C0.581,0.82,0.613,0.8,0.65,0.8H0.9c0.037,0,0.069,0.02,0.086,0.05C0.995,0.864,1,0.882,1,0.9z"/>
+		<rect y="1.35" fill="#AA2A73" width="1" height="0.1"/>
+	</g>
+</g>
+</svg>

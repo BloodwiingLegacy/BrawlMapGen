@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 24.1.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="1px" height="1px" viewBox="0 0 1 1" enable-background="new 0 0 1 1" xml:space="preserve">
+<g>
+	<path id="path2027_2_" fill="#A8013F" d="M0,1V0.95C0,0.425,0.425,0,0.95,0H1v1H0z"/>
+	
+		<radialGradient id="SVGID_1_" cx="-762.7985" cy="-291.2007" r="0.9014" gradientTransform="matrix(-6.123234e-17 1 1 6.123234e-17 292.2 763.8)" gradientUnits="userSpaceOnUse">
+		<stop  offset="0" style="stop-color:#E11462"/>
+		<stop  offset="0.5" style="stop-color:#F72B78"/>
+		<stop  offset="1" style="stop-color:#E11462"/>
+	</radialGradient>
+	<path fill="url(#SVGID_1_)" d="M1,1H0.1V0.946c0-0.016,0.001-0.033,0.002-0.05c0.007-0.118,0.039-0.23,0.09-0.33
+		c0.051-0.1,0.121-0.189,0.206-0.261c0.033-0.03,0.069-0.055,0.105-0.079C0.518,0.217,0.534,0.208,0.55,0.199
+		c0.106-0.056,0.226-0.09,0.352-0.098C0.918,0.1,0.934,0.1,0.95,0.1H1V1z"/>
+	<g id="g2034_2_">
+		<path id="path2030_2_" fill="#CE024F" d="M0.325,1C0.494,0.662,0.622,0.386,1,0.575v0.1C0.746,0.548,0.616,0.619,0.425,1H0.325z"
+			/>
+		<path id="path2031_2_" fill="#CE024F" d="M0.575,1C0.715,0.721,0.83,0.74,1,0.825v0.1C0.844,0.847,0.757,0.836,0.675,1H0.575z"/>
+		<path fill="#CE024F" d="M0.175,1H0.1V0.946C0.223,0.667,0.435,0.043,1,0.325v0.1C0.569,0.209,0.422,0.507,0.175,1z"/>
+		<path id="path2033_2_" fill="#CE024F" d="M1,0.175V0.1H0.95c-0.016,0-0.032,0-0.047,0.001C0.845,0.104,0.789,0.113,0.735,0.127
+			C0.816,0.131,0.904,0.127,1,0.175L1,0.175z"/>
+		<path fill="#CE024F" d="M0.925,1h-0.1C0.852,0.944,0.864,0.95,1,0.95L0.925,1z"/>
+	</g>
+	<path id="path2029_2_" fill="#A8013F" d="M1,1H0.9c0-0.032,0.015-0.061,0.039-0.079C0.95,0.912,0.962,0.906,0.975,0.903h0.001
+		c0.002,0,0.003-0.001,0.005-0.001C0.987,0.9,0.993,0.9,1,0.9V1z"/>
+</g>
+</svg>
